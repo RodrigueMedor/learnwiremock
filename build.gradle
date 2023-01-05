@@ -1,0 +1,105 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '2.7.6'
+	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+//	id "se.thinkcode.cucumber-runner" version "0.0.8"
+}
+
+group = 'com.learnwiremock'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '1.8'
+
+//configurations {
+//	compileOnly {
+//		extendsFrom annotationProcessor
+//	}
+//}
+
+configurations {
+	cucumberRuntime {
+		extendsFrom testImplementation
+	}
+}
+
+repositories {
+	mavenCentral()
+	maven { url "https://jitpack.io" }
+}
+
+ext {
+	set('springCloudVersion', "2021.0.5")
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-webflux'
+	compileOnly 'org.projectlombok:lombok'
+	annotationProcessor 'org.projectlombok:lombok'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'io.projectreactor:reactor-test'
+	testImplementation 'org.springframework.cloud:spring-cloud-starter-contract-stub-runner'
+	testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.9.0'
+	testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'
+
+	compileOnly group: 'info.cukes', name: 'gherkin', version: '2.12.2'
+	compileOnly group: 'io.cucumber', name: 'cucumber-jvm-deps', version: '1.0.6'
+//	testImplementation group: 'info.cukes', name: 'cucumber-junit', version: '1.2.6', ext: 'pom'
+	testImplementation group: 'info.cukes', name: 'cucumber-spring', version: '1.2.6', ext: 'pom'
+
+	testImplementation 'info.cukes:cucumber-java:1.2.6'
+	testImplementation 'io.cucumber:cucumber-jvm-deps:1.0.6'
+	testImplementation 'info.cukes:cucumber-junit:1.2.6'
+	testImplementation 'info.cukes:cucumber-spring:1.2.6'
+//	implementation group: 'io.rest-assured', name: 'json-schema-validator', version: '3.1.1'
+	implementation group: 'io.rest-assured', name: 'rest-assured', version: '3.1.1'
+	implementation group: 'com.atlassian.ta', name: 'wiremock-pact-generator', version: '2.1.0'
+
+//	testImplementation 'io.cucumber:cucumber-java:latest.release'
+//	testImplementation 'io.cucumber:cucumber-junit:latest.release'
+//	testImplementation 'io.cucumber:cucumber-core:latest.release'
+
+	testImplementation "com.github.JensPiegsa:wiremock-extension:0.4.0"
+	testImplementation "com.github.tomakehurst:wiremock-jre8-standalone:2.24.1"
+	testImplementation 'com.github.madvirus:cucumber-tables:0.5.1'
+	implementation group: 'io.cucumber', name: 'datatable', version: '1.0.3'
+	implementation group: 'com.fasterxml.jackson.datatype', name: 'jackson-datatype-jsr310', version: '2.3.0-rc1'
+	implementation group: 'com.thoughtworks.xstream', name: 'xstream', version: '1.4.19'
+
+
+}
+
+dependencyManagement {
+	imports {
+		mavenBom "org.springframework.cloud:spring-cloud-dependencies:${springCloudVersion}"
+	}
+}
+
+test {
+	useJUnitPlatform()
+}
+
+task cucumber() {
+	dependsOn assemble, compileTestJava
+	doLast {
+		javaexec {
+			main = "cucumber.api.cli.Main"
+			classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
+//            args = ['--help']
+//            args = ['--dry-run', '--glue', 'com.learnwiremock.steps', 'src/test/resources']
+            args = ['--dry-run', '--plugin', 'pretty', '--glue', 'com.learnwiremock.steps', 'src/test/resources']
+//            args = ['--plugin', 'pretty', '--glue', 'com.learnwiremock.steps', 'src/test/resources']
+//            args = ['--plugin', 'pretty', '--glue', 'com.craftofprogramming',
+//                    'src/test/resources/com/craftofprogramming/ExampleWithScenarioOutline.feature',
+//                    'src/test/resources/com/craftofprogramming/ExampleWithBasicBookQueries.feature']
+//            args = ['--plugin', 'pretty', '--glue', 'com.craftofprogramming',
+//                    'src/test/resources/com/craftofprogramming/ExampleWithBasicBookQueries.feature',
+//                    'src/test/resources/com/craftofprogramming/ExampleWithStepArguments.feature',
+//                    '--name', 'Search a book given its title',
+//                    '--name',  'Simple Example with A Data Table'
+//            ]
+//            args = ['--threads', 2, '--plugin', 'pretty', '--plugin', 'timeline:out/ParallelRun', '--glue', 'com.craftofprogramming',
+//                    'src/test/resources/com/craftofprogramming/ExampleWithBasicBookQueries.feature',
+//                    'src/test/resources/com/craftofprogramming/ExampleWithStepArguments.feature']
+//            args = ['--plugin', 'html:out/htmlReport.html', '--glue', 'com.learnwiremock.steps', 'src/test/resources']
+		}
+	}
+}
