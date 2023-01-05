@@ -99,7 +99,7 @@ task cucumber() {
 //            args = ['--threads', 2, '--plugin', 'pretty', '--plugin', 'timeline:out/ParallelRun', '--glue', 'com.craftofprogramming',
 //                    'src/test/resources/com/craftofprogramming/ExampleWithBasicBookQueries.feature',
 //                    'src/test/resources/com/craftofprogramming/ExampleWithStepArguments.feature']
-            args = ['--plugin', 'html:out/htmlReport.html',  'pretty', '--glue', 'com.learnwiremock.steps', 'src/test/resources']
+            args = ['--plugin', 'html:out/htmlReport.html', '--glue', 'com.learnwiremock.steps', 'src/test/resources']
 		}
 	}
 }
