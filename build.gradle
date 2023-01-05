@@ -84,7 +84,7 @@ task cucumber() {
 			main = "cucumber.api.cli.Main"
 			classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
 //            args = ['--help']
-//            args = ['--dry-run', '--glue', 'com.learnwiremock.steps', 'src/test/resources']
+            args = ['--dry-run', '--glue', 'com.learnwiremock.steps', 'src/test/resources']
 //            args = ['--dry-run', '--plugin', 'pretty', '--glue', 'com.learnwiremock.steps', 'src/test/resources']
 //            args = ['--plugin', 'pretty', '--glue', 'com.learnwiremock.steps', 'src/test/resources']
 //            args = ['--plugin', 'pretty', '--glue', 'com.craftofprogramming',
@@ -99,7 +99,7 @@ task cucumber() {
 //            args = ['--threads', 2, '--plugin', 'pretty', '--plugin', 'timeline:out/ParallelRun', '--glue', 'com.craftofprogramming',
 //                    'src/test/resources/com/craftofprogramming/ExampleWithBasicBookQueries.feature',
 //                    'src/test/resources/com/craftofprogramming/ExampleWithStepArguments.feature']
-            args = ['--plugin', 'html:out/htmlReport.html', '--glue', 'com.learnwiremock.steps', 'src/test/resources']
+//            args = ['--plugin', 'html:out/htmlReport.html', '--glue', 'com.learnwiremock.steps', 'src/test/resources']
 		}
 	}
 }
