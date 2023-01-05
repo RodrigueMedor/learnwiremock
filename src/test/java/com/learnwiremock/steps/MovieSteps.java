@@ -45,12 +45,12 @@ public class MovieSteps extends SpringIntegrationTest {
         wireMockRule.addMockServiceRequestListener(
                 wireMockPact
         );
-//        wireMockRule.stubFor(get(urlMatching(GET_ALL_MOVIES_V1+".*"))
-//                    .willReturn(
-//                            aResponse()
-//                                    .withStatus(200)
-//                                    .withHeader("Content-Type", "application/json")
-//                                    .withBodyFile("all-movies.json")));
+        wireMockRule.stubFor(get(urlMatching(GET_ALL_MOVIES_V1+".*"))
+                    .willReturn(
+                            aResponse()
+                                    .withStatus(200)
+                                    .withHeader("Content-Type", "application/json")
+                                    .withBodyFile("all-movies.json")));
 
     }
 

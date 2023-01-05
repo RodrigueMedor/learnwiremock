@@ -33,14 +33,23 @@ public class EmployeeSteps extends SpringIntegrationTest {
 
     @Before
     public void setUp() {
-        wireMockPact =
-                WireMockPactGenerator
-                        .builder("orderMs", "jsonPlaceHolderMs")
-                        .withRequestPathWhitelist(
-                                GET_ALL_EMPLOYEES_V1+".*"
-                        )
-                        .build();
-        wireMockRule.addMockServiceRequestListener(wireMockPact);
+
+        wireMockPact = WireMockPactGenerator
+                .builder("employeeMs", "employeeBooksMs")
+                .withRequestPathWhitelist(
+                        GET_ALL_EMPLOYEES_V1+".*"
+                )
+                .build();
+        wireMockRule.addMockServiceRequestListener(
+                wireMockPact
+        );
+
+        wireMockRule.stubFor(get(urlMatching(GET_ALL_EMPLOYEES_V1+".*"))
+                .willReturn(
+                        aResponse()
+                                .withStatus(200)
+                                .withHeader("Content-Type", "application/json")
+                                .withBodyFile("all-employes.json")));
 
     }
 
