@@ -1,19 +1,16 @@
-stages {
-    stage('Gradle tasks') {
-        steps {
-            sh 'bash ./gradlew ivtTest'
-            sh 'bash ./gradlew cucumber'
+pipeline {
+  agent any
+  stages {
+    stage('Run Tests') {
+      steps {
+        sh './mvnw clean test'
+      }
+      post {
+        always {
+          junit 'target/cucumber.xml'
+          cucumber buildStatus: 'null', customCssFiles: '', customJsFiles: '', failedFeaturesNumber: -1, failedScenariosNumber: -1, failedStepsNumber: -1, fileIncludePattern: 'target/cucumber.json','html:out/htmlReport.html', pendingStepsNumber: -1, skippedStepsNumber: -1, sortingMethod: 'ALPHABETICAL', undefinedStepsNumber: -1
         }
+      }
     }
-    stage('Generate HTML report') {
-        cucumber buildStatus: 'UNSTABLE',
-                fileIncludePattern: '**/*.json',
-                trendsLimit: 10,
-                classifications: [
-                    [
-                        'key': 'Browser',
-                        'value': 'Firefox'
-                    ]
-                ]
-    }
+  }
 }
