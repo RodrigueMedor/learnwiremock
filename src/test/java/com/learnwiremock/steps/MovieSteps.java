@@ -5,8 +5,11 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 import com.github.tomakehurst.wiremock.client.WireMock;
+import com.github.tomakehurst.wiremock.junit.WireMockRule;
+import com.learnwiremock.LearnwiremockApplication;
 import com.learnwiremock.dto.Movie;
-import com.learnwiremock.SpringIntegrationTest;
+//import com.learnwiremock.SpringIntegrationTest;
+import com.learnwiremock.service.MoviesRestClient;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -17,21 +20,35 @@ import cucumber.api.java.en.When;
 //import io.cucumber.java.en.Given;
 //import io.cucumber.java.en.Then;
 //import io.cucumber.java.en.When;
+import org.junit.Rule;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.TestPropertySource;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import static com.github.tomakehurst.wiremock.client.WireMock.*;
+import static com.github.tomakehurst.wiremock.core.WireMockConfiguration.wireMockConfig;
 import static com.learnwiremock.constants.MoviesAppConstants.ADD_MOVIE_V1;
 import static com.learnwiremock.constants.MoviesAppConstants.GET_ALL_MOVIES_V1;
 import static org.junit.Assert.*;
+@ContextConfiguration
+@SpringBootTest(classes = LearnwiremockApplication.class, webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
+@TestPropertySource(properties= {"movieapp.baseUrl=http://localhost:8889"})
+public class MovieSteps /*extends SpringIntegrationTest*/ {
 
-public class MovieSteps extends SpringIntegrationTest {
 
+    protected WireMockPactGenerator wireMockPact;
 
+    @Autowired
+    protected MoviesRestClient moviesRestClient;
+    @Rule
+    public WireMockRule wireMockRule = new WireMockRule(wireMockConfig().port(8889));
 
     @Before
     public void setUp() {

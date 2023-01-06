@@ -11,6 +11,6 @@ import org.junit.runner.RunWith;
         plugin = {"pretty", "html:out/htmlReport.html"},
         glue = {"com.learnwiremock.steps"},
         features = {"src/test/resources/features"})
-public class CucumberIntegrationTest extends SpringIntegrationTest{
+public class CucumberIntegrationTest /*extends SpringIntegrationTest*/{
 
 }
