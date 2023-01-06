@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Run Tests') {
       steps {
-        sh './mvnw clean test'
+        sh './gradlew cucumber'
       }
       post {
         always {
