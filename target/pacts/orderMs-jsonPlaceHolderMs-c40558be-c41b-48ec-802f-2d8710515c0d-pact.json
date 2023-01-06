@@ -1,0 +1,2909 @@
+{
+  "consumer": {
+    "name": "orderMs"
+  },
+  "provider": {
+    "name": "jsonPlaceHolderMs"
+  },
+  "interactions": [
+    {
+      "description": "GET /movieservice/v1/allMovies -> 200",
+      "request": {
+        "method": "GET",
+        "path": "/movieservice/v1/allMovies",
+        "headers": {
+          "content-type": "application/json",
+          "connection": "keep-alive",
+          "accept-encoding": "gzip,deflate",
+          "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_321)",
+          "accept": "application/json, application/*+json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "matched-stub-id": "2eaa43a4-f8e4-438c-b1f4-6425b7e5b427"
+        },
+        "body": [
+          {
+            "movie_id": 1,
+            "name": "Batman Begins",
+            "year": 2005,
+            "cast": "Christian Bale, Katie Holmes , Liam Neeson",
+            "release_date": "2005-06-15"
+          },
+          {
+            "movie_id": 2,
+            "name": "Dark Knight",
+            "year": 2008,
+            "cast": "Christian Bale, Heath Ledger , Michael Caine",
+            "release_date": "2008-07-18"
+          },
+          {
+            "movie_id": 3,
+            "name": "The Dark Knight Rises",
+            "year": 2012,
+            "cast": "Christian Bale, Heath Ledger , Michael Caine",
+            "release_date": "2012-07-20"
+          },
+          {
+            "movie_id": 4,
+            "name": "The Avengers",
+            "year": 2012,
+            "cast": "Robert Downey Jr, Chris Evans , Chris HemsWorth",
+            "release_date": "2012-05-04"
+          },
+          {
+            "movie_id": 5,
+            "name": "Avengers: Age of Ultron",
+            "year": 2015,
+            "cast": "Robert Downey Jr, Chris Evans , Chris HemsWorth",
+            "release_date": "2015-05-01"
+          },
+          {
+            "movie_id": 6,
+            "name": "Avengers: Infinity War",
+            "year": 2018,
+            "cast": "Robert Downey Jr, Chris Evans , Chris HemsWorth",
+            "release_date": "2018-04-27"
+          },
+          {
+            "movie_id": 7,
+            "name": "Avengers: End Game",
+            "year": 2019,
+            "cast": "Robert Downey Jr, Chris Evans , Chris HemsWorth",
+            "release_date": "2019-04-26"
+          },
+          {
+            "movie_id": 8,
+            "name": "The Hangover",
+            "year": 2009,
+            "cast": "Bradley Cooper, Ed Helms , Zach Galifianakis",
+            "release_date": "2009-06-05"
+          },
+          {
+            "movie_id": 9,
+            "name": "The Imitation Game",
+            "year": 2014,
+            "cast": "Benedict Cumberbatch, Keira Knightley",
+            "release_date": "2014-12-25"
+          },
+          {
+            "movie_id": 10,
+            "name": "The Departed",
+            "year": 2006,
+            "cast": "Leonardo DiCaprio, Matt Damon , Mark Wahlberg",
+            "release_date": "2006-10-06"
+          }
+        ]
+      }
+    },
+    {
+      "description": "GET /movieservice/v1/allMovies -> 200",
+      "request": {
+        "method": "GET",
+        "path": "/movieservice/v1/allMovies",
+        "headers": {
+          "content-type": "application/json",
+          "connection": "keep-alive",
+          "accept-encoding": "gzip,deflate",
+          "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_321)",
+          "accept": "application/json, application/*+json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "matched-stub-id": "2eaa43a4-f8e4-438c-b1f4-6425b7e5b427"
+        },
+        "body": [
+          {
+            "movie_id": 1,
+            "name": "Batman Begins",
+            "year": 2005,
+            "cast": "Christian Bale, Katie Holmes , Liam Neeson",
+            "release_date": "2005-06-15"
+          },
+          {
+            "movie_id": 2,
+            "name": "Dark Knight",
+            "year": 2008,
+            "cast": "Christian Bale, Heath Ledger , Michael Caine",
+            "release_date": "2008-07-18"
+          },
+          {
+            "movie_id": 3,
+            "name": "The Dark Knight Rises",
+            "year": 2012,
+            "cast": "Christian Bale, Heath Ledger , Michael Caine",
+            "release_date": "2012-07-20"
+          },
+          {
+            "movie_id": 4,
+            "name": "The Avengers",
+            "year": 2012,
+            "cast": "Robert Downey Jr, Chris Evans , Chris HemsWorth",
+            "release_date": "2012-05-04"
+          },
+          {
+            "movie_id": 5,
+            "name": "Avengers: Age of Ultron",
+            "year": 2015,
+            "cast": "Robert Downey Jr, Chris Evans , Chris HemsWorth",
+            "release_date": "2015-05-01"
+          },
+          {
+            "movie_id": 6,
+            "name": "Avengers: Infinity War",
+            "year": 2018,
+            "cast": "Robert Downey Jr, Chris Evans , Chris HemsWorth",
+            "release_date": "2018-04-27"
+          },
+          {
+            "movie_id": 7,
+            "name": "Avengers: End Game",
+            "year": 2019,
+            "cast": "Robert Downey Jr, Chris Evans , Chris HemsWorth",
+            "release_date": "2019-04-26"
+          },
+          {
+            "movie_id": 8,
+            "name": "The Hangover",
+            "year": 2009,
+            "cast": "Bradley Cooper, Ed Helms , Zach Galifianakis",
+            "release_date": "2009-06-05"
+          },
+          {
+            "movie_id": 9,
+            "name": "The Imitation Game",
+            "year": 2014,
+            "cast": "Benedict Cumberbatch, Keira Knightley",
+            "release_date": "2014-12-25"
+          },
+          {
+            "movie_id": 10,
+            "name": "The Departed",
+            "year": 2006,
+            "cast": "Leonardo DiCaprio, Matt Damon , Mark Wahlberg",
+            "release_date": "2006-10-06"
+          }
+        ]
+      }
+    },
+    {
+      "description": "GET /movieservice/v1/allMovies -> 200",
+      "request": {
+        "method": "GET",
+        "path": "/movieservice/v1/allMovies",
+        "headers": {
+          "content-type": "application/json",
+          "connection": "keep-alive",
+          "accept-encoding": "gzip,deflate",
+          "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_321)",
+          "accept": "application/json, application/*+json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "matched-stub-id": "f1a3ceb1-1dd3-4512-b1e0-c0bb7375ef3a"
+        },
+        "body": [
+          {
+            "movie_id": 11,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "Tom Hanks, Tim Allen",
+            "release_date": "1919-03-01"
+          },
+          {
+            "movie_id": 12,
+            "name": "Joe",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "1919-03-01"
+          },
+          {
+            "movie_id": 14,
+            "name": "Zark",
+            "year": 2021,
+            "cast": "Sara Valentin",
+            "release_date": "1919-03-01"
+          }
+        ]
+      }
+    },
+    {
+      "description": "GET /movieservice/v1/allMovies -> 200",
+      "request": {
+        "method": "GET",
+        "path": "/movieservice/v1/allMovies",
+        "headers": {
+          "content-type": "application/json",
+          "connection": "keep-alive",
+          "accept-encoding": "gzip,deflate",
+          "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_321)",
+          "accept": "application/json, application/*+json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "matched-stub-id": "f1a3ceb1-1dd3-4512-b1e0-c0bb7375ef3a"
+        },
+        "body": [
+          {
+            "movie_id": 11,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "Tom Hanks, Tim Allen",
+            "release_date": "1919-03-01"
+          },
+          {
+            "movie_id": 12,
+            "name": "Joe",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "1919-03-01"
+          },
+          {
+            "movie_id": 14,
+            "name": "Zark",
+            "year": 2021,
+            "cast": "Sara Valentin",
+            "release_date": "1919-03-01"
+          }
+        ]
+      }
+    },
+    {
+      "description": "GET /movieservice/v1/allMovies -> 200",
+      "request": {
+        "method": "GET",
+        "path": "/movieservice/v1/allMovies",
+        "headers": {
+          "content-type": "application/json",
+          "connection": "keep-alive",
+          "accept-encoding": "gzip,deflate",
+          "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_321)",
+          "accept": "application/json, application/*+json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "matched-stub-id": "6f8c9353-de93-48ef-9a83-74c3f1f02166"
+        },
+        "body": [
+          {
+            "movie_id": 11,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "Tom Hanks, Tim Allen",
+            "release_date": "1919-03-01"
+          }
+        ]
+      }
+    },
+    {
+      "description": "GET /movieservice/v1/allMovies -> 200",
+      "request": {
+        "method": "GET",
+        "path": "/movieservice/v1/allMovies",
+        "headers": {
+          "content-type": "application/json",
+          "connection": "keep-alive",
+          "accept-encoding": "gzip,deflate",
+          "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_321)",
+          "accept": "application/json, application/*+json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "matched-stub-id": "6f8c9353-de93-48ef-9a83-74c3f1f02166"
+        },
+        "body": [
+          {
+            "movie_id": 11,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "Tom Hanks, Tim Allen",
+            "release_date": "1919-03-01"
+          }
+        ]
+      }
+    },
+    {
+      "description": "GET /movieservice/v1/allMovies -> 200",
+      "request": {
+        "method": "GET",
+        "path": "/movieservice/v1/allMovies",
+        "headers": {
+          "content-type": "application/json",
+          "connection": "keep-alive",
+          "accept-encoding": "gzip,deflate",
+          "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_321)",
+          "accept": "application/json, application/*+json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "matched-stub-id": "6f8c9353-de93-48ef-9a83-74c3f1f02166"
+        },
+        "body": [
+          {
+            "movie_id": 11,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "Tom Hanks, Tim Allen",
+            "release_date": "1919-03-01"
+          }
+        ]
+      }
+    },
+    {
+      "description": "GET /movieservice/v1/allMovies -> 200",
+      "request": {
+        "method": "GET",
+        "path": "/movieservice/v1/allMovies",
+        "headers": {
+          "content-type": "application/json",
+          "connection": "keep-alive",
+          "accept-encoding": "gzip,deflate",
+          "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_321)",
+          "accept": "application/json, application/*+json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "matched-stub-id": "a236bafb-abcd-46a5-b27c-ea853231fa62"
+        },
+        "body": [
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "Tom Hanks, Tim Allen",
+            "release_date": "2005-06-15"
+          },
+          {
+            "movie_id": null,
+            "name": "",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-16"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": null,
+            "cast": "Sara Valentin",
+            "release_date": "2005-06-18"
+          },
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "",
+            "release_date": "2005-06-20"
+          },
+          {
+            "movie_id": null,
+            "name": "Joe",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-28"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": 2021,
+            "cast": "Sara Valentin Kayleigh",
+            "release_date": "2005-07-15"
+          }
+        ]
+      }
+    },
+    {
+      "description": "GET /movieservice/v1/allMovies -> 200",
+      "request": {
+        "method": "GET",
+        "path": "/movieservice/v1/allMovies",
+        "headers": {
+          "content-type": "application/json",
+          "connection": "keep-alive",
+          "accept-encoding": "gzip,deflate",
+          "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_321)",
+          "accept": "application/json, application/*+json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "matched-stub-id": "a236bafb-abcd-46a5-b27c-ea853231fa62"
+        },
+        "body": [
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "Tom Hanks, Tim Allen",
+            "release_date": "2005-06-15"
+          },
+          {
+            "movie_id": null,
+            "name": "",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-16"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": null,
+            "cast": "Sara Valentin",
+            "release_date": "2005-06-18"
+          },
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "",
+            "release_date": "2005-06-20"
+          },
+          {
+            "movie_id": null,
+            "name": "Joe",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-28"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": 2021,
+            "cast": "Sara Valentin Kayleigh",
+            "release_date": "2005-07-15"
+          }
+        ]
+      }
+    },
+    {
+      "description": "GET /movieservice/v1/allMovies -> 200",
+      "request": {
+        "method": "GET",
+        "path": "/movieservice/v1/allMovies",
+        "headers": {
+          "content-type": "application/json",
+          "connection": "keep-alive",
+          "accept-encoding": "gzip,deflate",
+          "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_321)",
+          "accept": "application/json, application/*+json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "matched-stub-id": "a236bafb-abcd-46a5-b27c-ea853231fa62"
+        },
+        "body": [
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "Tom Hanks, Tim Allen",
+            "release_date": "2005-06-15"
+          },
+          {
+            "movie_id": null,
+            "name": "",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-16"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": null,
+            "cast": "Sara Valentin",
+            "release_date": "2005-06-18"
+          },
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "",
+            "release_date": "2005-06-20"
+          },
+          {
+            "movie_id": null,
+            "name": "Joe",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-28"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": 2021,
+            "cast": "Sara Valentin Kayleigh",
+            "release_date": "2005-07-15"
+          }
+        ]
+      }
+    },
+    {
+      "description": "GET /movieservice/v1/allMovies -> 200",
+      "request": {
+        "method": "GET",
+        "path": "/movieservice/v1/allMovies",
+        "headers": {
+          "content-type": "application/json",
+          "connection": "keep-alive",
+          "accept-encoding": "gzip,deflate",
+          "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_321)",
+          "accept": "application/json, application/*+json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "matched-stub-id": "a236bafb-abcd-46a5-b27c-ea853231fa62"
+        },
+        "body": [
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "Tom Hanks, Tim Allen",
+            "release_date": "2005-06-15"
+          },
+          {
+            "movie_id": null,
+            "name": "",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-16"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": null,
+            "cast": "Sara Valentin",
+            "release_date": "2005-06-18"
+          },
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "",
+            "release_date": "2005-06-20"
+          },
+          {
+            "movie_id": null,
+            "name": "Joe",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-28"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": 2021,
+            "cast": "Sara Valentin Kayleigh",
+            "release_date": "2005-07-15"
+          }
+        ]
+      }
+    },
+    {
+      "description": "GET /movieservice/v1/allMovies -> 200",
+      "request": {
+        "method": "GET",
+        "path": "/movieservice/v1/allMovies",
+        "headers": {
+          "content-type": "application/json",
+          "connection": "keep-alive",
+          "accept-encoding": "gzip,deflate",
+          "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_321)",
+          "accept": "application/json, application/*+json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "matched-stub-id": "822bdf23-8dfb-49fc-9971-ec2521e4c572"
+        },
+        "body": [
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "Tom Hanks, Tim Allen",
+            "release_date": "2005-06-15"
+          },
+          {
+            "movie_id": null,
+            "name": "",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-16"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": null,
+            "cast": "Sara Valentin",
+            "release_date": "2005-06-18"
+          },
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "",
+            "release_date": "2005-06-20"
+          },
+          {
+            "movie_id": null,
+            "name": "Joe",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-28"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": 2021,
+            "cast": "Sara Valentin Kayleigh",
+            "release_date": "2005-07-15"
+          }
+        ]
+      }
+    },
+    {
+      "description": "GET /movieservice/v1/allMovies -> 200",
+      "request": {
+        "method": "GET",
+        "path": "/movieservice/v1/allMovies",
+        "headers": {
+          "content-type": "application/json",
+          "connection": "keep-alive",
+          "accept-encoding": "gzip,deflate",
+          "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_321)",
+          "accept": "application/json, application/*+json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "matched-stub-id": "822bdf23-8dfb-49fc-9971-ec2521e4c572"
+        },
+        "body": [
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "Tom Hanks, Tim Allen",
+            "release_date": "2005-06-15"
+          },
+          {
+            "movie_id": null,
+            "name": "",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-16"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": null,
+            "cast": "Sara Valentin",
+            "release_date": "2005-06-18"
+          },
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "",
+            "release_date": "2005-06-20"
+          },
+          {
+            "movie_id": null,
+            "name": "Joe",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-28"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": 2021,
+            "cast": "Sara Valentin Kayleigh",
+            "release_date": "2005-07-15"
+          }
+        ]
+      }
+    },
+    {
+      "description": "GET /movieservice/v1/allMovies -> 200",
+      "request": {
+        "method": "GET",
+        "path": "/movieservice/v1/allMovies",
+        "headers": {
+          "content-type": "application/json",
+          "connection": "keep-alive",
+          "accept-encoding": "gzip,deflate",
+          "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_321)",
+          "accept": "application/json, application/*+json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "matched-stub-id": "822bdf23-8dfb-49fc-9971-ec2521e4c572"
+        },
+        "body": [
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "Tom Hanks, Tim Allen",
+            "release_date": "2005-06-15"
+          },
+          {
+            "movie_id": null,
+            "name": "",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-16"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": null,
+            "cast": "Sara Valentin",
+            "release_date": "2005-06-18"
+          },
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "",
+            "release_date": "2005-06-20"
+          },
+          {
+            "movie_id": null,
+            "name": "Joe",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-28"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": 2021,
+            "cast": "Sara Valentin Kayleigh",
+            "release_date": "2005-07-15"
+          }
+        ]
+      }
+    },
+    {
+      "description": "GET /movieservice/v1/allMovies -> 200",
+      "request": {
+        "method": "GET",
+        "path": "/movieservice/v1/allMovies",
+        "headers": {
+          "content-type": "application/json",
+          "connection": "keep-alive",
+          "accept-encoding": "gzip,deflate",
+          "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_321)",
+          "accept": "application/json, application/*+json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "matched-stub-id": "822bdf23-8dfb-49fc-9971-ec2521e4c572"
+        },
+        "body": [
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "Tom Hanks, Tim Allen",
+            "release_date": "2005-06-15"
+          },
+          {
+            "movie_id": null,
+            "name": "",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-16"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": null,
+            "cast": "Sara Valentin",
+            "release_date": "2005-06-18"
+          },
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "",
+            "release_date": "2005-06-20"
+          },
+          {
+            "movie_id": null,
+            "name": "Joe",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-28"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": 2021,
+            "cast": "Sara Valentin Kayleigh",
+            "release_date": "2005-07-15"
+          }
+        ]
+      }
+    },
+    {
+      "description": "GET /movieservice/v1/allMovies -> 200",
+      "request": {
+        "method": "GET",
+        "path": "/movieservice/v1/allMovies",
+        "headers": {
+          "content-type": "application/json",
+          "connection": "keep-alive",
+          "accept-encoding": "gzip,deflate",
+          "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_321)",
+          "accept": "application/json, application/*+json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "matched-stub-id": "822bdf23-8dfb-49fc-9971-ec2521e4c572"
+        },
+        "body": [
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "Tom Hanks, Tim Allen",
+            "release_date": "2005-06-15"
+          },
+          {
+            "movie_id": null,
+            "name": "",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-16"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": null,
+            "cast": "Sara Valentin",
+            "release_date": "2005-06-18"
+          },
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "",
+            "release_date": "2005-06-20"
+          },
+          {
+            "movie_id": null,
+            "name": "Joe",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-28"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": 2021,
+            "cast": "Sara Valentin Kayleigh",
+            "release_date": "2005-07-15"
+          }
+        ]
+      }
+    },
+    {
+      "description": "GET /movieservice/v1/allMovies -> 200",
+      "request": {
+        "method": "GET",
+        "path": "/movieservice/v1/allMovies",
+        "headers": {
+          "content-type": "application/json",
+          "connection": "keep-alive",
+          "accept-encoding": "gzip,deflate",
+          "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_321)",
+          "accept": "application/json, application/*+json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "matched-stub-id": "3ac638e5-209f-4bb4-a8ca-147d486455c7"
+        },
+        "body": [
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "Tom Hanks, Tim Allen",
+            "release_date": "2005-06-15"
+          },
+          {
+            "movie_id": null,
+            "name": "",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-16"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": null,
+            "cast": "Sara Valentin",
+            "release_date": "2005-06-18"
+          },
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "",
+            "release_date": "2005-06-20"
+          },
+          {
+            "movie_id": null,
+            "name": "Joe",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-28"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": 2021,
+            "cast": "Sara Valentin Kayleigh",
+            "release_date": "2005-07-15"
+          }
+        ]
+      }
+    },
+    {
+      "description": "GET /movieservice/v1/allMovies -> 200",
+      "request": {
+        "method": "GET",
+        "path": "/movieservice/v1/allMovies",
+        "headers": {
+          "content-type": "application/json",
+          "connection": "keep-alive",
+          "accept-encoding": "gzip,deflate",
+          "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_321)",
+          "accept": "application/json, application/*+json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "matched-stub-id": "3ac638e5-209f-4bb4-a8ca-147d486455c7"
+        },
+        "body": [
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "Tom Hanks, Tim Allen",
+            "release_date": "2005-06-15"
+          },
+          {
+            "movie_id": null,
+            "name": "",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-16"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": null,
+            "cast": "Sara Valentin",
+            "release_date": "2005-06-18"
+          },
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "",
+            "release_date": "2005-06-20"
+          },
+          {
+            "movie_id": null,
+            "name": "Joe",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-28"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": 2021,
+            "cast": "Sara Valentin Kayleigh",
+            "release_date": "2005-07-15"
+          }
+        ]
+      }
+    },
+    {
+      "description": "GET /movieservice/v1/allMovies -> 200",
+      "request": {
+        "method": "GET",
+        "path": "/movieservice/v1/allMovies",
+        "headers": {
+          "content-type": "application/json",
+          "connection": "keep-alive",
+          "accept-encoding": "gzip,deflate",
+          "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_321)",
+          "accept": "application/json, application/*+json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "matched-stub-id": "3ac638e5-209f-4bb4-a8ca-147d486455c7"
+        },
+        "body": [
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "Tom Hanks, Tim Allen",
+            "release_date": "2005-06-15"
+          },
+          {
+            "movie_id": null,
+            "name": "",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-16"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": null,
+            "cast": "Sara Valentin",
+            "release_date": "2005-06-18"
+          },
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "",
+            "release_date": "2005-06-20"
+          },
+          {
+            "movie_id": null,
+            "name": "Joe",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-28"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": 2021,
+            "cast": "Sara Valentin Kayleigh",
+            "release_date": "2005-07-15"
+          }
+        ]
+      }
+    },
+    {
+      "description": "GET /movieservice/v1/allMovies -> 200",
+      "request": {
+        "method": "GET",
+        "path": "/movieservice/v1/allMovies",
+        "headers": {
+          "content-type": "application/json",
+          "connection": "keep-alive",
+          "accept-encoding": "gzip,deflate",
+          "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_321)",
+          "accept": "application/json, application/*+json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "matched-stub-id": "3ac638e5-209f-4bb4-a8ca-147d486455c7"
+        },
+        "body": [
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "Tom Hanks, Tim Allen",
+            "release_date": "2005-06-15"
+          },
+          {
+            "movie_id": null,
+            "name": "",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-16"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": null,
+            "cast": "Sara Valentin",
+            "release_date": "2005-06-18"
+          },
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "",
+            "release_date": "2005-06-20"
+          },
+          {
+            "movie_id": null,
+            "name": "Joe",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-28"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": 2021,
+            "cast": "Sara Valentin Kayleigh",
+            "release_date": "2005-07-15"
+          }
+        ]
+      }
+    },
+    {
+      "description": "GET /movieservice/v1/allMovies -> 200",
+      "request": {
+        "method": "GET",
+        "path": "/movieservice/v1/allMovies",
+        "headers": {
+          "content-type": "application/json",
+          "connection": "keep-alive",
+          "accept-encoding": "gzip,deflate",
+          "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_321)",
+          "accept": "application/json, application/*+json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "matched-stub-id": "3ac638e5-209f-4bb4-a8ca-147d486455c7"
+        },
+        "body": [
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "Tom Hanks, Tim Allen",
+            "release_date": "2005-06-15"
+          },
+          {
+            "movie_id": null,
+            "name": "",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-16"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": null,
+            "cast": "Sara Valentin",
+            "release_date": "2005-06-18"
+          },
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "",
+            "release_date": "2005-06-20"
+          },
+          {
+            "movie_id": null,
+            "name": "Joe",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-28"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": 2021,
+            "cast": "Sara Valentin Kayleigh",
+            "release_date": "2005-07-15"
+          }
+        ]
+      }
+    },
+    {
+      "description": "GET /movieservice/v1/allMovies -> 200",
+      "request": {
+        "method": "GET",
+        "path": "/movieservice/v1/allMovies",
+        "headers": {
+          "content-type": "application/json",
+          "connection": "keep-alive",
+          "accept-encoding": "gzip,deflate",
+          "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_321)",
+          "accept": "application/json, application/*+json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "matched-stub-id": "3ac638e5-209f-4bb4-a8ca-147d486455c7"
+        },
+        "body": [
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "Tom Hanks, Tim Allen",
+            "release_date": "2005-06-15"
+          },
+          {
+            "movie_id": null,
+            "name": "",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-16"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": null,
+            "cast": "Sara Valentin",
+            "release_date": "2005-06-18"
+          },
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "",
+            "release_date": "2005-06-20"
+          },
+          {
+            "movie_id": null,
+            "name": "Joe",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-28"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": 2021,
+            "cast": "Sara Valentin Kayleigh",
+            "release_date": "2005-07-15"
+          }
+        ]
+      }
+    },
+    {
+      "description": "GET /movieservice/v1/allMovies -> 200",
+      "request": {
+        "method": "GET",
+        "path": "/movieservice/v1/allMovies",
+        "headers": {
+          "content-type": "application/json",
+          "connection": "keep-alive",
+          "accept-encoding": "gzip,deflate",
+          "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_321)",
+          "accept": "application/json, application/*+json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "matched-stub-id": "ed60dfa9-a895-4026-9383-e737b5dccfe5"
+        },
+        "body": [
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "Tom Hanks, Tim Allen",
+            "release_date": "2005-06-15"
+          },
+          {
+            "movie_id": null,
+            "name": "",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-16"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": null,
+            "cast": "Sara Valentin",
+            "release_date": "2005-06-18"
+          },
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "",
+            "release_date": "2005-06-20"
+          },
+          {
+            "movie_id": null,
+            "name": "Joe",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-28"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": 2021,
+            "cast": "Sara Valentin Kayleigh",
+            "release_date": "2005-07-15"
+          }
+        ]
+      }
+    },
+    {
+      "description": "GET /movieservice/v1/allMovies -> 200",
+      "request": {
+        "method": "GET",
+        "path": "/movieservice/v1/allMovies",
+        "headers": {
+          "content-type": "application/json",
+          "connection": "keep-alive",
+          "accept-encoding": "gzip,deflate",
+          "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_321)",
+          "accept": "application/json, application/*+json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "matched-stub-id": "ed60dfa9-a895-4026-9383-e737b5dccfe5"
+        },
+        "body": [
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "Tom Hanks, Tim Allen",
+            "release_date": "2005-06-15"
+          },
+          {
+            "movie_id": null,
+            "name": "",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-16"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": null,
+            "cast": "Sara Valentin",
+            "release_date": "2005-06-18"
+          },
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "",
+            "release_date": "2005-06-20"
+          },
+          {
+            "movie_id": null,
+            "name": "Joe",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-28"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": 2021,
+            "cast": "Sara Valentin Kayleigh",
+            "release_date": "2005-07-15"
+          }
+        ]
+      }
+    },
+    {
+      "description": "GET /movieservice/v1/allMovies -> 200",
+      "request": {
+        "method": "GET",
+        "path": "/movieservice/v1/allMovies",
+        "headers": {
+          "content-type": "application/json",
+          "connection": "keep-alive",
+          "accept-encoding": "gzip,deflate",
+          "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_321)",
+          "accept": "application/json, application/*+json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "matched-stub-id": "ed60dfa9-a895-4026-9383-e737b5dccfe5"
+        },
+        "body": [
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "Tom Hanks, Tim Allen",
+            "release_date": "2005-06-15"
+          },
+          {
+            "movie_id": null,
+            "name": "",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-16"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": null,
+            "cast": "Sara Valentin",
+            "release_date": "2005-06-18"
+          },
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "",
+            "release_date": "2005-06-20"
+          },
+          {
+            "movie_id": null,
+            "name": "Joe",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-28"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": 2021,
+            "cast": "Sara Valentin Kayleigh",
+            "release_date": "2005-07-15"
+          }
+        ]
+      }
+    },
+    {
+      "description": "GET /movieservice/v1/allMovies -> 200",
+      "request": {
+        "method": "GET",
+        "path": "/movieservice/v1/allMovies",
+        "headers": {
+          "content-type": "application/json",
+          "connection": "keep-alive",
+          "accept-encoding": "gzip,deflate",
+          "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_321)",
+          "accept": "application/json, application/*+json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "matched-stub-id": "ed60dfa9-a895-4026-9383-e737b5dccfe5"
+        },
+        "body": [
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "Tom Hanks, Tim Allen",
+            "release_date": "2005-06-15"
+          },
+          {
+            "movie_id": null,
+            "name": "",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-16"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": null,
+            "cast": "Sara Valentin",
+            "release_date": "2005-06-18"
+          },
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "",
+            "release_date": "2005-06-20"
+          },
+          {
+            "movie_id": null,
+            "name": "Joe",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-28"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": 2021,
+            "cast": "Sara Valentin Kayleigh",
+            "release_date": "2005-07-15"
+          }
+        ]
+      }
+    },
+    {
+      "description": "GET /movieservice/v1/allMovies -> 200",
+      "request": {
+        "method": "GET",
+        "path": "/movieservice/v1/allMovies",
+        "headers": {
+          "content-type": "application/json",
+          "connection": "keep-alive",
+          "accept-encoding": "gzip,deflate",
+          "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_321)",
+          "accept": "application/json, application/*+json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "matched-stub-id": "ed60dfa9-a895-4026-9383-e737b5dccfe5"
+        },
+        "body": [
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "Tom Hanks, Tim Allen",
+            "release_date": "2005-06-15"
+          },
+          {
+            "movie_id": null,
+            "name": "",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-16"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": null,
+            "cast": "Sara Valentin",
+            "release_date": "2005-06-18"
+          },
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "",
+            "release_date": "2005-06-20"
+          },
+          {
+            "movie_id": null,
+            "name": "Joe",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-28"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": 2021,
+            "cast": "Sara Valentin Kayleigh",
+            "release_date": "2005-07-15"
+          }
+        ]
+      }
+    },
+    {
+      "description": "GET /movieservice/v1/allMovies -> 200",
+      "request": {
+        "method": "GET",
+        "path": "/movieservice/v1/allMovies",
+        "headers": {
+          "content-type": "application/json",
+          "connection": "keep-alive",
+          "accept-encoding": "gzip,deflate",
+          "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_321)",
+          "accept": "application/json, application/*+json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "matched-stub-id": "ed60dfa9-a895-4026-9383-e737b5dccfe5"
+        },
+        "body": [
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "Tom Hanks, Tim Allen",
+            "release_date": "2005-06-15"
+          },
+          {
+            "movie_id": null,
+            "name": "",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-16"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": null,
+            "cast": "Sara Valentin",
+            "release_date": "2005-06-18"
+          },
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "",
+            "release_date": "2005-06-20"
+          },
+          {
+            "movie_id": null,
+            "name": "Joe",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-28"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": 2021,
+            "cast": "Sara Valentin Kayleigh",
+            "release_date": "2005-07-15"
+          }
+        ]
+      }
+    },
+    {
+      "description": "GET /movieservice/v1/allMovies -> 200",
+      "request": {
+        "method": "GET",
+        "path": "/movieservice/v1/allMovies",
+        "headers": {
+          "content-type": "application/json",
+          "connection": "keep-alive",
+          "accept-encoding": "gzip,deflate",
+          "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_321)",
+          "accept": "application/json, application/*+json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "matched-stub-id": "ed60dfa9-a895-4026-9383-e737b5dccfe5"
+        },
+        "body": [
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "Tom Hanks, Tim Allen",
+            "release_date": "2005-06-15"
+          },
+          {
+            "movie_id": null,
+            "name": "",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-16"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": null,
+            "cast": "Sara Valentin",
+            "release_date": "2005-06-18"
+          },
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "",
+            "release_date": "2005-06-20"
+          },
+          {
+            "movie_id": null,
+            "name": "Joe",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-28"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": 2021,
+            "cast": "Sara Valentin Kayleigh",
+            "release_date": "2005-07-15"
+          }
+        ]
+      }
+    },
+    {
+      "description": "GET /movieservice/v1/allMovies -> 200",
+      "request": {
+        "method": "GET",
+        "path": "/movieservice/v1/allMovies",
+        "headers": {
+          "content-type": "application/json",
+          "connection": "keep-alive",
+          "accept-encoding": "gzip,deflate",
+          "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_321)",
+          "accept": "application/json, application/*+json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "matched-stub-id": "fdde872f-554b-440f-9cb1-a620f97172a5"
+        },
+        "body": [
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "Tom Hanks, Tim Allen",
+            "release_date": "2005-06-15"
+          },
+          {
+            "movie_id": null,
+            "name": "",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-16"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": null,
+            "cast": "Sara Valentin",
+            "release_date": "2005-06-18"
+          },
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "",
+            "release_date": "2005-06-20"
+          },
+          {
+            "movie_id": null,
+            "name": "Joe",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-28"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": 2021,
+            "cast": "Sara Valentin Kayleigh",
+            "release_date": "2005-07-15"
+          }
+        ]
+      }
+    },
+    {
+      "description": "GET /movieservice/v1/allMovies -> 200",
+      "request": {
+        "method": "GET",
+        "path": "/movieservice/v1/allMovies",
+        "headers": {
+          "content-type": "application/json",
+          "connection": "keep-alive",
+          "accept-encoding": "gzip,deflate",
+          "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_321)",
+          "accept": "application/json, application/*+json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "matched-stub-id": "fdde872f-554b-440f-9cb1-a620f97172a5"
+        },
+        "body": [
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "Tom Hanks, Tim Allen",
+            "release_date": "2005-06-15"
+          },
+          {
+            "movie_id": null,
+            "name": "",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-16"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": null,
+            "cast": "Sara Valentin",
+            "release_date": "2005-06-18"
+          },
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "",
+            "release_date": "2005-06-20"
+          },
+          {
+            "movie_id": null,
+            "name": "Joe",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-28"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": 2021,
+            "cast": "Sara Valentin Kayleigh",
+            "release_date": "2005-07-15"
+          }
+        ]
+      }
+    },
+    {
+      "description": "GET /movieservice/v1/allMovies -> 200",
+      "request": {
+        "method": "GET",
+        "path": "/movieservice/v1/allMovies",
+        "headers": {
+          "content-type": "application/json",
+          "connection": "keep-alive",
+          "accept-encoding": "gzip,deflate",
+          "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_321)",
+          "accept": "application/json, application/*+json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "matched-stub-id": "fdde872f-554b-440f-9cb1-a620f97172a5"
+        },
+        "body": [
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "Tom Hanks, Tim Allen",
+            "release_date": "2005-06-15"
+          },
+          {
+            "movie_id": null,
+            "name": "",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-16"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": null,
+            "cast": "Sara Valentin",
+            "release_date": "2005-06-18"
+          },
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "",
+            "release_date": "2005-06-20"
+          },
+          {
+            "movie_id": null,
+            "name": "Joe",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-28"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": 2021,
+            "cast": "Sara Valentin Kayleigh",
+            "release_date": "2005-07-15"
+          }
+        ]
+      }
+    },
+    {
+      "description": "GET /movieservice/v1/allMovies -> 200",
+      "request": {
+        "method": "GET",
+        "path": "/movieservice/v1/allMovies",
+        "headers": {
+          "content-type": "application/json",
+          "connection": "keep-alive",
+          "accept-encoding": "gzip,deflate",
+          "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_321)",
+          "accept": "application/json, application/*+json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "matched-stub-id": "fdde872f-554b-440f-9cb1-a620f97172a5"
+        },
+        "body": [
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "Tom Hanks, Tim Allen",
+            "release_date": "2005-06-15"
+          },
+          {
+            "movie_id": null,
+            "name": "",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-16"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": null,
+            "cast": "Sara Valentin",
+            "release_date": "2005-06-18"
+          },
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "",
+            "release_date": "2005-06-20"
+          },
+          {
+            "movie_id": null,
+            "name": "Joe",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-28"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": 2021,
+            "cast": "Sara Valentin Kayleigh",
+            "release_date": "2005-07-15"
+          }
+        ]
+      }
+    },
+    {
+      "description": "GET /movieservice/v1/allMovies -> 200",
+      "request": {
+        "method": "GET",
+        "path": "/movieservice/v1/allMovies",
+        "headers": {
+          "content-type": "application/json",
+          "connection": "keep-alive",
+          "accept-encoding": "gzip,deflate",
+          "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_321)",
+          "accept": "application/json, application/*+json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "matched-stub-id": "fdde872f-554b-440f-9cb1-a620f97172a5"
+        },
+        "body": [
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "Tom Hanks, Tim Allen",
+            "release_date": "2005-06-15"
+          },
+          {
+            "movie_id": null,
+            "name": "",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-16"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": null,
+            "cast": "Sara Valentin",
+            "release_date": "2005-06-18"
+          },
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "",
+            "release_date": "2005-06-20"
+          },
+          {
+            "movie_id": null,
+            "name": "Joe",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-28"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": 2021,
+            "cast": "Sara Valentin Kayleigh",
+            "release_date": "2005-07-15"
+          }
+        ]
+      }
+    },
+    {
+      "description": "GET /movieservice/v1/allMovies -> 200",
+      "request": {
+        "method": "GET",
+        "path": "/movieservice/v1/allMovies",
+        "headers": {
+          "content-type": "application/json",
+          "connection": "keep-alive",
+          "accept-encoding": "gzip,deflate",
+          "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_321)",
+          "accept": "application/json, application/*+json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "matched-stub-id": "fdde872f-554b-440f-9cb1-a620f97172a5"
+        },
+        "body": [
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "Tom Hanks, Tim Allen",
+            "release_date": "2005-06-15"
+          },
+          {
+            "movie_id": null,
+            "name": "",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-16"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": null,
+            "cast": "Sara Valentin",
+            "release_date": "2005-06-18"
+          },
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "",
+            "release_date": "2005-06-20"
+          },
+          {
+            "movie_id": null,
+            "name": "Joe",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-28"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": 2021,
+            "cast": "Sara Valentin Kayleigh",
+            "release_date": "2005-07-15"
+          }
+        ]
+      }
+    },
+    {
+      "description": "GET /movieservice/v1/allMovies -> 200",
+      "request": {
+        "method": "GET",
+        "path": "/movieservice/v1/allMovies",
+        "headers": {
+          "content-type": "application/json",
+          "connection": "keep-alive",
+          "accept-encoding": "gzip,deflate",
+          "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_321)",
+          "accept": "application/json, application/*+json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "matched-stub-id": "fdde872f-554b-440f-9cb1-a620f97172a5"
+        },
+        "body": [
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "Tom Hanks, Tim Allen",
+            "release_date": "2005-06-15"
+          },
+          {
+            "movie_id": null,
+            "name": "",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-16"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": null,
+            "cast": "Sara Valentin",
+            "release_date": "2005-06-18"
+          },
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "",
+            "release_date": "2005-06-20"
+          },
+          {
+            "movie_id": null,
+            "name": "Joe",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-28"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": 2021,
+            "cast": "Sara Valentin Kayleigh",
+            "release_date": "2005-07-15"
+          }
+        ]
+      }
+    },
+    {
+      "description": "GET /movieservice/v1/allMovies -> 200",
+      "request": {
+        "method": "GET",
+        "path": "/movieservice/v1/allMovies",
+        "headers": {
+          "content-type": "application/json",
+          "connection": "keep-alive",
+          "accept-encoding": "gzip,deflate",
+          "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_321)",
+          "accept": "application/json, application/*+json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "matched-stub-id": "fdde872f-554b-440f-9cb1-a620f97172a5"
+        },
+        "body": [
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "Tom Hanks, Tim Allen",
+            "release_date": "2005-06-15"
+          },
+          {
+            "movie_id": null,
+            "name": "",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-16"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": null,
+            "cast": "Sara Valentin",
+            "release_date": "2005-06-18"
+          },
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "",
+            "release_date": "2005-06-20"
+          },
+          {
+            "movie_id": null,
+            "name": "Joe",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-28"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": 2021,
+            "cast": "Sara Valentin Kayleigh",
+            "release_date": "2005-07-15"
+          }
+        ]
+      }
+    },
+    {
+      "description": "GET /movieservice/v1/allMovies -> 200",
+      "request": {
+        "method": "GET",
+        "path": "/movieservice/v1/allMovies",
+        "headers": {
+          "content-type": "application/json",
+          "connection": "keep-alive",
+          "accept-encoding": "gzip,deflate",
+          "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_321)",
+          "accept": "application/json, application/*+json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "matched-stub-id": "79ccf270-50ef-41ad-98ae-551d4ff912ea"
+        },
+        "body": [
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "Tom Hanks, Tim Allen",
+            "release_date": "2005-06-15"
+          },
+          {
+            "movie_id": null,
+            "name": "",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-16"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": null,
+            "cast": "Sara Valentin",
+            "release_date": "2005-06-18"
+          },
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "",
+            "release_date": "2005-06-20"
+          },
+          {
+            "movie_id": null,
+            "name": "Joe",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-28"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": 2021,
+            "cast": "Sara Valentin Kayleigh",
+            "release_date": "2005-07-15"
+          }
+        ]
+      }
+    },
+    {
+      "description": "GET /movieservice/v1/allMovies -> 200",
+      "request": {
+        "method": "GET",
+        "path": "/movieservice/v1/allMovies",
+        "headers": {
+          "content-type": "application/json",
+          "connection": "keep-alive",
+          "accept-encoding": "gzip,deflate",
+          "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_321)",
+          "accept": "application/json, application/*+json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "matched-stub-id": "79ccf270-50ef-41ad-98ae-551d4ff912ea"
+        },
+        "body": [
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "Tom Hanks, Tim Allen",
+            "release_date": "2005-06-15"
+          },
+          {
+            "movie_id": null,
+            "name": "",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-16"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": null,
+            "cast": "Sara Valentin",
+            "release_date": "2005-06-18"
+          },
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "",
+            "release_date": "2005-06-20"
+          },
+          {
+            "movie_id": null,
+            "name": "Joe",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-28"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": 2021,
+            "cast": "Sara Valentin Kayleigh",
+            "release_date": "2005-07-15"
+          }
+        ]
+      }
+    },
+    {
+      "description": "GET /movieservice/v1/allMovies -> 200",
+      "request": {
+        "method": "GET",
+        "path": "/movieservice/v1/allMovies",
+        "headers": {
+          "content-type": "application/json",
+          "connection": "keep-alive",
+          "accept-encoding": "gzip,deflate",
+          "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_321)",
+          "accept": "application/json, application/*+json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "matched-stub-id": "79ccf270-50ef-41ad-98ae-551d4ff912ea"
+        },
+        "body": [
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "Tom Hanks, Tim Allen",
+            "release_date": "2005-06-15"
+          },
+          {
+            "movie_id": null,
+            "name": "",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-16"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": null,
+            "cast": "Sara Valentin",
+            "release_date": "2005-06-18"
+          },
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "",
+            "release_date": "2005-06-20"
+          },
+          {
+            "movie_id": null,
+            "name": "Joe",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-28"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": 2021,
+            "cast": "Sara Valentin Kayleigh",
+            "release_date": "2005-07-15"
+          }
+        ]
+      }
+    },
+    {
+      "description": "GET /movieservice/v1/allMovies -> 200",
+      "request": {
+        "method": "GET",
+        "path": "/movieservice/v1/allMovies",
+        "headers": {
+          "content-type": "application/json",
+          "connection": "keep-alive",
+          "accept-encoding": "gzip,deflate",
+          "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_321)",
+          "accept": "application/json, application/*+json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "matched-stub-id": "79ccf270-50ef-41ad-98ae-551d4ff912ea"
+        },
+        "body": [
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "Tom Hanks, Tim Allen",
+            "release_date": "2005-06-15"
+          },
+          {
+            "movie_id": null,
+            "name": "",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-16"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": null,
+            "cast": "Sara Valentin",
+            "release_date": "2005-06-18"
+          },
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "",
+            "release_date": "2005-06-20"
+          },
+          {
+            "movie_id": null,
+            "name": "Joe",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-28"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": 2021,
+            "cast": "Sara Valentin Kayleigh",
+            "release_date": "2005-07-15"
+          }
+        ]
+      }
+    },
+    {
+      "description": "GET /movieservice/v1/allMovies -> 200",
+      "request": {
+        "method": "GET",
+        "path": "/movieservice/v1/allMovies",
+        "headers": {
+          "content-type": "application/json",
+          "connection": "keep-alive",
+          "accept-encoding": "gzip,deflate",
+          "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_321)",
+          "accept": "application/json, application/*+json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "matched-stub-id": "79ccf270-50ef-41ad-98ae-551d4ff912ea"
+        },
+        "body": [
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "Tom Hanks, Tim Allen",
+            "release_date": "2005-06-15"
+          },
+          {
+            "movie_id": null,
+            "name": "",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-16"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": null,
+            "cast": "Sara Valentin",
+            "release_date": "2005-06-18"
+          },
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "",
+            "release_date": "2005-06-20"
+          },
+          {
+            "movie_id": null,
+            "name": "Joe",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-28"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": 2021,
+            "cast": "Sara Valentin Kayleigh",
+            "release_date": "2005-07-15"
+          }
+        ]
+      }
+    },
+    {
+      "description": "GET /movieservice/v1/allMovies -> 200",
+      "request": {
+        "method": "GET",
+        "path": "/movieservice/v1/allMovies",
+        "headers": {
+          "content-type": "application/json",
+          "connection": "keep-alive",
+          "accept-encoding": "gzip,deflate",
+          "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_321)",
+          "accept": "application/json, application/*+json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "matched-stub-id": "79ccf270-50ef-41ad-98ae-551d4ff912ea"
+        },
+        "body": [
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "Tom Hanks, Tim Allen",
+            "release_date": "2005-06-15"
+          },
+          {
+            "movie_id": null,
+            "name": "",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-16"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": null,
+            "cast": "Sara Valentin",
+            "release_date": "2005-06-18"
+          },
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "",
+            "release_date": "2005-06-20"
+          },
+          {
+            "movie_id": null,
+            "name": "Joe",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-28"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": 2021,
+            "cast": "Sara Valentin Kayleigh",
+            "release_date": "2005-07-15"
+          }
+        ]
+      }
+    },
+    {
+      "description": "GET /movieservice/v1/allMovies -> 200",
+      "request": {
+        "method": "GET",
+        "path": "/movieservice/v1/allMovies",
+        "headers": {
+          "content-type": "application/json",
+          "connection": "keep-alive",
+          "accept-encoding": "gzip,deflate",
+          "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_321)",
+          "accept": "application/json, application/*+json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "matched-stub-id": "79ccf270-50ef-41ad-98ae-551d4ff912ea"
+        },
+        "body": [
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "Tom Hanks, Tim Allen",
+            "release_date": "2005-06-15"
+          },
+          {
+            "movie_id": null,
+            "name": "",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-16"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": null,
+            "cast": "Sara Valentin",
+            "release_date": "2005-06-18"
+          },
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "",
+            "release_date": "2005-06-20"
+          },
+          {
+            "movie_id": null,
+            "name": "Joe",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-28"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": 2021,
+            "cast": "Sara Valentin Kayleigh",
+            "release_date": "2005-07-15"
+          }
+        ]
+      }
+    },
+    {
+      "description": "GET /movieservice/v1/allMovies -> 200",
+      "request": {
+        "method": "GET",
+        "path": "/movieservice/v1/allMovies",
+        "headers": {
+          "content-type": "application/json",
+          "connection": "keep-alive",
+          "accept-encoding": "gzip,deflate",
+          "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_321)",
+          "accept": "application/json, application/*+json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "matched-stub-id": "79ccf270-50ef-41ad-98ae-551d4ff912ea"
+        },
+        "body": [
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "Tom Hanks, Tim Allen",
+            "release_date": "2005-06-15"
+          },
+          {
+            "movie_id": null,
+            "name": "",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-16"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": null,
+            "cast": "Sara Valentin",
+            "release_date": "2005-06-18"
+          },
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "",
+            "release_date": "2005-06-20"
+          },
+          {
+            "movie_id": null,
+            "name": "Joe",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-28"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": 2021,
+            "cast": "Sara Valentin Kayleigh",
+            "release_date": "2005-07-15"
+          }
+        ]
+      }
+    },
+    {
+      "description": "GET /movieservice/v1/allMovies -> 200",
+      "request": {
+        "method": "GET",
+        "path": "/movieservice/v1/allMovies",
+        "headers": {
+          "content-type": "application/json",
+          "connection": "keep-alive",
+          "accept-encoding": "gzip,deflate",
+          "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_321)",
+          "accept": "application/json, application/*+json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "matched-stub-id": "79ccf270-50ef-41ad-98ae-551d4ff912ea"
+        },
+        "body": [
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "Tom Hanks, Tim Allen",
+            "release_date": "2005-06-15"
+          },
+          {
+            "movie_id": null,
+            "name": "",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-16"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": null,
+            "cast": "Sara Valentin",
+            "release_date": "2005-06-18"
+          },
+          {
+            "movie_id": null,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "",
+            "release_date": "2005-06-20"
+          },
+          {
+            "movie_id": null,
+            "name": "Joe",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "2005-06-28"
+          },
+          {
+            "movie_id": null,
+            "name": "Zark",
+            "year": 2021,
+            "cast": "Sara Valentin Kayleigh",
+            "release_date": "2005-07-15"
+          }
+        ]
+      }
+    }
+  ]
+}

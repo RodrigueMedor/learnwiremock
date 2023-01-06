@@ -1,0 +1,374 @@
+{
+  "consumer": {
+    "name": "orderMs"
+  },
+  "provider": {
+    "name": "jsonPlaceHolderMs"
+  },
+  "interactions": [
+    {
+      "description": "GET /movieservice/v1/allMovies -> 200",
+      "request": {
+        "method": "GET",
+        "path": "/movieservice/v1/allMovies",
+        "headers": {
+          "content-type": "application/json",
+          "connection": "keep-alive",
+          "accept-encoding": "gzip,deflate",
+          "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_321)",
+          "accept": "application/json, application/*+json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "matched-stub-id": "17341497-fd34-448c-bef8-57ca27a5dd5f"
+        },
+        "body": [
+          {
+            "movie_id": 1,
+            "name": "Batman Begins",
+            "year": 2005,
+            "cast": "Christian Bale, Katie Holmes , Liam Neeson",
+            "release_date": "2005-06-15"
+          },
+          {
+            "movie_id": 2,
+            "name": "Dark Knight",
+            "year": 2008,
+            "cast": "Christian Bale, Heath Ledger , Michael Caine",
+            "release_date": "2008-07-18"
+          },
+          {
+            "movie_id": 3,
+            "name": "The Dark Knight Rises",
+            "year": 2012,
+            "cast": "Christian Bale, Heath Ledger , Michael Caine",
+            "release_date": "2012-07-20"
+          },
+          {
+            "movie_id": 4,
+            "name": "The Avengers",
+            "year": 2012,
+            "cast": "Robert Downey Jr, Chris Evans , Chris HemsWorth",
+            "release_date": "2012-05-04"
+          },
+          {
+            "movie_id": 5,
+            "name": "Avengers: Age of Ultron",
+            "year": 2015,
+            "cast": "Robert Downey Jr, Chris Evans , Chris HemsWorth",
+            "release_date": "2015-05-01"
+          },
+          {
+            "movie_id": 6,
+            "name": "Avengers: Infinity War",
+            "year": 2018,
+            "cast": "Robert Downey Jr, Chris Evans , Chris HemsWorth",
+            "release_date": "2018-04-27"
+          },
+          {
+            "movie_id": 7,
+            "name": "Avengers: End Game",
+            "year": 2019,
+            "cast": "Robert Downey Jr, Chris Evans , Chris HemsWorth",
+            "release_date": "2019-04-26"
+          },
+          {
+            "movie_id": 8,
+            "name": "The Hangover",
+            "year": 2009,
+            "cast": "Bradley Cooper, Ed Helms , Zach Galifianakis",
+            "release_date": "2009-06-05"
+          },
+          {
+            "movie_id": 9,
+            "name": "The Imitation Game",
+            "year": 2014,
+            "cast": "Benedict Cumberbatch, Keira Knightley",
+            "release_date": "2014-12-25"
+          },
+          {
+            "movie_id": 10,
+            "name": "The Departed",
+            "year": 2006,
+            "cast": "Leonardo DiCaprio, Matt Damon , Mark Wahlberg",
+            "release_date": "2006-10-06"
+          }
+        ]
+      }
+    },
+    {
+      "description": "GET /movieservice/v1/allMovies -> 200",
+      "request": {
+        "method": "GET",
+        "path": "/movieservice/v1/allMovies",
+        "headers": {
+          "content-type": "application/json",
+          "connection": "keep-alive",
+          "accept-encoding": "gzip,deflate",
+          "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_321)",
+          "accept": "application/json, application/*+json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "matched-stub-id": "17341497-fd34-448c-bef8-57ca27a5dd5f"
+        },
+        "body": [
+          {
+            "movie_id": 1,
+            "name": "Batman Begins",
+            "year": 2005,
+            "cast": "Christian Bale, Katie Holmes , Liam Neeson",
+            "release_date": "2005-06-15"
+          },
+          {
+            "movie_id": 2,
+            "name": "Dark Knight",
+            "year": 2008,
+            "cast": "Christian Bale, Heath Ledger , Michael Caine",
+            "release_date": "2008-07-18"
+          },
+          {
+            "movie_id": 3,
+            "name": "The Dark Knight Rises",
+            "year": 2012,
+            "cast": "Christian Bale, Heath Ledger , Michael Caine",
+            "release_date": "2012-07-20"
+          },
+          {
+            "movie_id": 4,
+            "name": "The Avengers",
+            "year": 2012,
+            "cast": "Robert Downey Jr, Chris Evans , Chris HemsWorth",
+            "release_date": "2012-05-04"
+          },
+          {
+            "movie_id": 5,
+            "name": "Avengers: Age of Ultron",
+            "year": 2015,
+            "cast": "Robert Downey Jr, Chris Evans , Chris HemsWorth",
+            "release_date": "2015-05-01"
+          },
+          {
+            "movie_id": 6,
+            "name": "Avengers: Infinity War",
+            "year": 2018,
+            "cast": "Robert Downey Jr, Chris Evans , Chris HemsWorth",
+            "release_date": "2018-04-27"
+          },
+          {
+            "movie_id": 7,
+            "name": "Avengers: End Game",
+            "year": 2019,
+            "cast": "Robert Downey Jr, Chris Evans , Chris HemsWorth",
+            "release_date": "2019-04-26"
+          },
+          {
+            "movie_id": 8,
+            "name": "The Hangover",
+            "year": 2009,
+            "cast": "Bradley Cooper, Ed Helms , Zach Galifianakis",
+            "release_date": "2009-06-05"
+          },
+          {
+            "movie_id": 9,
+            "name": "The Imitation Game",
+            "year": 2014,
+            "cast": "Benedict Cumberbatch, Keira Knightley",
+            "release_date": "2014-12-25"
+          },
+          {
+            "movie_id": 10,
+            "name": "The Departed",
+            "year": 2006,
+            "cast": "Leonardo DiCaprio, Matt Damon , Mark Wahlberg",
+            "release_date": "2006-10-06"
+          }
+        ]
+      }
+    },
+    {
+      "description": "GET /movieservice/v1/allMovies -> 200",
+      "request": {
+        "method": "GET",
+        "path": "/movieservice/v1/allMovies",
+        "headers": {
+          "content-type": "application/json",
+          "connection": "keep-alive",
+          "accept-encoding": "gzip,deflate",
+          "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_321)",
+          "accept": "application/json, application/*+json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "matched-stub-id": "1e58e728-218c-40cf-987c-3f8e0b8c9913"
+        },
+        "body": [
+          {
+            "movie_id": 11,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "Tom Hanks, Tim Allen",
+            "release_date": "1919-03-01"
+          },
+          {
+            "movie_id": 12,
+            "name": "Joe",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "1919-03-01"
+          },
+          {
+            "movie_id": 14,
+            "name": "Zark",
+            "year": 2021,
+            "cast": "Sara Valentin",
+            "release_date": "1919-03-01"
+          }
+        ]
+      }
+    },
+    {
+      "description": "GET /movieservice/v1/allMovies -> 200",
+      "request": {
+        "method": "GET",
+        "path": "/movieservice/v1/allMovies",
+        "headers": {
+          "content-type": "application/json",
+          "connection": "keep-alive",
+          "accept-encoding": "gzip,deflate",
+          "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_321)",
+          "accept": "application/json, application/*+json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "matched-stub-id": "1e58e728-218c-40cf-987c-3f8e0b8c9913"
+        },
+        "body": [
+          {
+            "movie_id": 11,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "Tom Hanks, Tim Allen",
+            "release_date": "1919-03-01"
+          },
+          {
+            "movie_id": 12,
+            "name": "Joe",
+            "year": 2022,
+            "cast": "Rodrigue Medor",
+            "release_date": "1919-03-01"
+          },
+          {
+            "movie_id": 14,
+            "name": "Zark",
+            "year": 2021,
+            "cast": "Sara Valentin",
+            "release_date": "1919-03-01"
+          }
+        ]
+      }
+    },
+    {
+      "description": "GET /movieservice/v1/allMovies -> 200",
+      "request": {
+        "method": "GET",
+        "path": "/movieservice/v1/allMovies",
+        "headers": {
+          "content-type": "application/json",
+          "connection": "keep-alive",
+          "accept-encoding": "gzip,deflate",
+          "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_321)",
+          "accept": "application/json, application/*+json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "matched-stub-id": "1b1df3f0-26dd-4705-81d8-f7f0729eab6b"
+        },
+        "body": [
+          {
+            "movie_id": 11,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "Tom Hanks, Tim Allen",
+            "release_date": "1919-03-01"
+          }
+        ]
+      }
+    },
+    {
+      "description": "GET /movieservice/v1/allMovies -> 200",
+      "request": {
+        "method": "GET",
+        "path": "/movieservice/v1/allMovies",
+        "headers": {
+          "content-type": "application/json",
+          "connection": "keep-alive",
+          "accept-encoding": "gzip,deflate",
+          "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_321)",
+          "accept": "application/json, application/*+json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "matched-stub-id": "1b1df3f0-26dd-4705-81d8-f7f0729eab6b"
+        },
+        "body": [
+          {
+            "movie_id": 11,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "Tom Hanks, Tim Allen",
+            "release_date": "1919-03-01"
+          }
+        ]
+      }
+    },
+    {
+      "description": "GET /movieservice/v1/allMovies -> 200",
+      "request": {
+        "method": "GET",
+        "path": "/movieservice/v1/allMovies",
+        "headers": {
+          "content-type": "application/json",
+          "connection": "keep-alive",
+          "accept-encoding": "gzip,deflate",
+          "user-agent": "Apache-HttpClient/4.5.13 (Java/1.8.0_321)",
+          "accept": "application/json, application/*+json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "matched-stub-id": "1b1df3f0-26dd-4705-81d8-f7f0729eab6b"
+        },
+        "body": [
+          {
+            "movie_id": 11,
+            "name": "Toy Story 4",
+            "year": 2019,
+            "cast": "Tom Hanks, Tim Allen",
+            "release_date": "1919-03-01"
+          }
+        ]
+      }
+    }
+  ]
+}

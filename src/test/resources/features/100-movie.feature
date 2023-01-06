@@ -27,7 +27,8 @@ Feature: Get movie details
 
   Scenario Outline: <testCase> <expectedResult>
 
-    Given user wants to create a movie with the following attributes
+    Given fetch list of movies
+    When user wants to create a movie with the following attributes
       | movie_id | name   | year   | cast   | release_date   |
       | 12       | <name> | <year> | <cast> | <release_date> |
 

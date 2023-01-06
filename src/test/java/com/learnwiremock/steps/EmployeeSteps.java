@@ -6,10 +6,11 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.github.tomakehurst.wiremock.client.WireMock;
 import com.github.tomakehurst.wiremock.junit.WireMockRule;
 import com.learnwiremock.LearnwiremockApplication;
-//import com.learnwiremock.SpringIntegrationTest;
+import com.learnwiremock.SpringIntegrationTest;
 import com.learnwiremock.dto.Address;
 import com.learnwiremock.dto.Employee;
 import com.learnwiremock.service.MoviesRestClient;
+import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -20,7 +21,9 @@ import cucumber.api.java.en.When;
 //import io.cucumber.java.en.Given;
 //import io.cucumber.java.en.Then;
 //import io.cucumber.java.en.When;
+//import org.junit.Before;
 import org.junit.Rule;
+import org.junit.jupiter.api.AfterEach;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpHeaders;
@@ -39,21 +42,11 @@ import static com.learnwiremock.constants.MoviesAppConstants.*;
 import static org.junit.Assert.assertEquals;
 import static com.github.tomakehurst.wiremock.core.WireMockConfiguration.wireMockConfig;
 
-@ContextConfiguration
-@SpringBootTest(classes = LearnwiremockApplication.class, webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
-@TestPropertySource(properties= {"movieapp.baseUrl=http://localhost:8888"})
-public class EmployeeSteps /*extends SpringIntegrationTest*/ {
-
-    protected WireMockPactGenerator wireMockPact;
-
-    @Autowired
-    protected MoviesRestClient moviesRestClient;
-    @Rule
-    public WireMockRule wireMockRule = new WireMockRule(wireMockConfig().port(8888));
+public class EmployeeSteps extends SpringIntegrationTest {
 
     @Before
     public void setUp() {
-
+        wireMockRule.start();
         wireMockPact = WireMockPactGenerator
                 .builder("employeeMs", "employeeBooksMs")
                 .withRequestPathWhitelist(
@@ -117,9 +110,9 @@ public class EmployeeSteps /*extends SpringIntegrationTest*/ {
 
     @When("^employee already exists$")
     public void employee_already_exists() throws Throwable {
-        givenThat(post(urlPathEqualTo(ADD_EMPLOYEE_V1)).willReturn(
-                aResponse().withStatus(400)
-        ));
+//        givenThat(post(urlPathEqualTo(ADD_EMPLOYEE_V1)).willReturn(
+//                aResponse().withStatus(400)
+//        ));
     }
 
     @When("^user wants to get employee by id (\\d+)$")
@@ -157,5 +150,15 @@ public class EmployeeSteps /*extends SpringIntegrationTest*/ {
     @Then("^following employee address are returned$")
     public void following_employee_address_are_returned(List<Address> addresses) throws Throwable {
 
+    }
+
+    @After
+    public void afterAll() {
+        wireMockRule.stop();
+    }
+
+    @AfterEach
+    public void afterEach() {
+        wireMockRule.resetAll();
     }
 }

@@ -2,6 +2,7 @@ plugins {
 	id 'java'
 	id 'org.springframework.boot' version '2.7.6'
 	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+	id "com.github.spacialcircumstances.gradle-cucumber-reporting" version "0.1.25"
 //	id "se.thinkcode.cucumber-runner" version "0.0.8"
 }
 
@@ -40,10 +41,15 @@ dependencies {
 	testImplementation 'org.junit.jupiter:junit-jupiter-engine:5.9.0'
 	testImplementation 'org.junit.jupiter:junit-jupiter-api:5.9.0'
 
+//	implementation group: 'net.masterthought.jenkins', name: 'cucumber-reports', version: '3.0.0'
+
 	compileOnly group: 'info.cukes', name: 'gherkin', version: '2.12.2'
 	compileOnly group: 'io.cucumber', name: 'cucumber-jvm-deps', version: '1.0.6'
 //	testImplementation group: 'info.cukes', name: 'cucumber-junit', version: '1.2.6', ext: 'pom'
 	testImplementation group: 'info.cukes', name: 'cucumber-spring', version: '1.2.6', ext: 'pom'
+	implementation group: 'io.cucumber', name: 'html-formatter', version: '17.0.0'
+	implementation group: 'io.cucumber', name: 'tag-expressions', version: '4.1.0'
+	implementation group: 'io.cucumber', name: 'datatable-matchers', version: '7.2.3'
 
 	testImplementation 'info.cukes:cucumber-java:1.2.6'
 	testImplementation 'io.cucumber:cucumber-jvm-deps:1.0.6'
@@ -83,23 +89,45 @@ task cucumber() {
 		javaexec {
 			main = "cucumber.api.cli.Main"
 			classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
-//            args = ['--help']
-//            args = ['--dry-run', '--glue', 'com.learnwiremock.steps', 'src/test/resources']
-//            args = ['--dry-run', '--plugin', 'pretty', '--glue', 'com.learnwiremock.steps', 'src/test/resources']
-//            args = ['--plugin', 'pretty', '--glue', 'com.learnwiremock.steps', 'src/test/resources']
-//            args = ['--plugin', 'pretty', '--glue', 'com.craftofprogramming',
-//                    'src/test/resources/com/craftofprogramming/ExampleWithScenarioOutline.feature',
-//                    'src/test/resources/com/craftofprogramming/ExampleWithBasicBookQueries.feature']
-//            args = ['--plugin', 'pretty', '--glue', 'com.craftofprogramming',
-//                    'src/test/resources/com/craftofprogramming/ExampleWithBasicBookQueries.feature',
-//                    'src/test/resources/com/craftofprogramming/ExampleWithStepArguments.feature',
-//                    '--name', 'Search a book given its title',
-//                    '--name',  'Simple Example with A Data Table'
-//            ]
-//            args = ['--threads', 2, '--plugin', 'pretty', '--plugin', 'timeline:out/ParallelRun', '--glue', 'com.craftofprogramming',
-//                    'src/test/resources/com/craftofprogramming/ExampleWithBasicBookQueries.feature',
-//                    'src/test/resources/com/craftofprogramming/ExampleWithStepArguments.feature']
-            args = ['--plugin', 'html:out/htmlReport.html', '--glue', 'com.learnwiremock.steps', 'src/test/resources']
+//////            args = ['--help']
+//////            args = ['--dry-run', '--glue', 'com.learnwiremock.steps', 'src/test/resources']
+//////            args = ['--dry-run', '--plugin', 'pretty', '--glue', 'com.learnwiremock.steps', 'src/test/resources']
+//////            args = ['--plugin', 'pretty', '--glue', 'com.learnwiremock.steps', 'src/test/resources']
+//////            args = ['--plugin', 'pretty', '--glue', 'com.craftofprogramming',
+//////                    'src/test/resources/com/craftofprogramming/ExampleWithScenarioOutline.feature',
+//////                    'src/test/resources/com/craftofprogramming/ExampleWithBasicBookQueries.feature']
+//////            args = ['--plugin', 'pretty', '--glue', 'com.craftofprogramming',
+//////                    'src/test/resources/com/craftofprogramming/ExampleWithBasicBookQueries.feature',
+//////                    'src/test/resources/com/craftofprogramming/ExampleWithStepArguments.feature',
+//////                    '--name', 'Search a book given its title',
+//////                    '--name',  'Simple Example with A Data Table'
+//////            ]
+//////            args = ['--threads', 2, '--plugin', 'pretty', '--plugin', 'timeline:out/ParallelRun', '--glue', 'com.craftofprogramming',
+//////                    'src/test/resources/com/craftofprogramming/ExampleWithBasicBookQueries.feature',
+//////                    'src/test/resources/com/craftofprogramming/ExampleWithStepArguments.feature']
+////            args = ['--plugin', 'html:out/htmlReport.html', '--glue', 'com.learnwiremock.steps', 'src/test/resources']
+				args = ['--plugin', 'pretty','--plugin','html:CucumberReports','--plugin', 'json:CucumberReports/report.json','--glue', 'com.learnwiremock.steps', 'src/test/resources']
 		}
 	}
+}
+
+//cucumberReports {
+//	outputDir = file('path/for/generated/html')
+//	buildId = '0'
+//	reports = files('path/to/cucumber-report.json', 'another/cucumber-json.json')
+//}
+
+//task cucumber(type: JavaExec) {
+//	dependsOn assemble, compileTestJava
+//	systemProperty('envcu', System.properties['envcu'] ?: 'dev')
+//	main = "io.cucumber.core.cli.Main"
+////	main = "cucumber.api.cli.Main"
+//	classpath = configurations.cucumberRuntime + sourceSets.main.output + sourceSets.test.output
+//	args = ['--plugin', 'pretty','--plugin','html:CucumberReports','--plugin', 'json:CucumberReports/report.json','--glue', 'com.learnwiremock.steps', 'src/test/resources']
+//}
+
+cucumberReports {
+	outputDir = file('CucumberReports')
+	buildId = '0'
+	reports = files('CucumberReports/report.json')
 }

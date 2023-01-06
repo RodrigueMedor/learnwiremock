@@ -1,0 +1,1488 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 3300445000,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "an employee with the following attributes",
+            "match": {
+              "location": "EmployeeSteps.an_employee_with_the_following_attributes(Employee\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "matriculeId",
+                  "firstname",
+                  "lastname",
+                  "dateOfBirth",
+                  "startDate",
+                  "employmentType",
+                  "email",
+                  "salaire"
+                ],
+                "line": 7
+              },
+              {
+                "cells": [
+                  "1",
+                  "Rachel",
+                  "Green",
+                  "1990-01-01",
+                  "2018-01-01",
+                  "Permanent",
+                  "rachel.green@fs.com",
+                  "12000"
+                ],
+                "line": 8
+              },
+              {
+                "cells": [
+                  "2",
+                  "Rodrigue",
+                  "Medor",
+                  "1984-01-01",
+                  "2020-01-01",
+                  "Temporary",
+                  "rmedor.green@fs.com",
+                  "12300"
+                ],
+                "line": 9
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 30932800,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "with the following address",
+            "match": {
+              "location": "EmployeeSteps.with_the_following_address(Address\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "address_id",
+                  "street",
+                  "city",
+                  "zip",
+                  "state",
+                  "country",
+                  "phone"
+                ],
+                "line": 12
+              },
+              {
+                "cells": [
+                  "1",
+                  "123 Main Street",
+                  "10001",
+                  "32811",
+                  "OH",
+                  "USA",
+                  "641-342-547"
+                ],
+                "line": 13
+              },
+              {
+                "cells": [
+                  "2",
+                  "124 Main Street",
+                  "10001",
+                  "32812",
+                  "FL",
+                  "USA",
+                  "771-342-4536"
+                ],
+                "line": 14
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 486621100,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "employee already exists",
+            "match": {
+              "location": "EmployeeSteps.employee_already_exists()"
+            },
+            "keyword": "When "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 95354001,
+              "status": "passed"
+            },
+            "match": {
+              "location": "MovieSteps.setUp()"
+            }
+          },
+          {
+            "result": {
+              "duration": 8556400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "EmployeeSteps.setUp()"
+            }
+          }
+        ],
+        "line": 19,
+        "name": "GET BY ID",
+        "description": "",
+        "id": "get-employee;get-by-id",
+        "after": [
+          {
+            "result": {
+              "duration": 12398200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "MovieSteps.afterAll()"
+            }
+          },
+          {
+            "result": {
+              "duration": 142800,
+              "status": "passed"
+            },
+            "match": {
+              "location": "EmployeeSteps.afterAll()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 23730700,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "user wants to get employee by id 2",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 33
+                }
+              ],
+              "location": "EmployeeSteps.user_wants_to_get_employee_by_id(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 78201,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "the get \u0027IS SUCCESSFUL\u0027",
+            "match": {
+              "location": "EmployeeSteps.the_get_IS_SUCCESSFUL()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 844800,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "following employee is returned",
+            "match": {
+              "location": "EmployeeSteps.following_employee_is_returned(Employee\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "matriculeId",
+                  "firstname",
+                  "lastname",
+                  "dateOfBirth",
+                  "startDate",
+                  "employmentType",
+                  "email",
+                  "salaire"
+                ],
+                "line": 24
+              },
+              {
+                "cells": [
+                  "200",
+                  "Rachel",
+                  "Green",
+                  "1990-01-01",
+                  "2018-01-01",
+                  "Permanent",
+                  "rachel.green@fs.com",
+                  "100000"
+                ],
+                "line": 25
+              }
+            ],
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1993000,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "following employee address are returned",
+            "match": {
+              "location": "EmployeeSteps.following_employee_address_are_returned(Address\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "address_id",
+                  "street",
+                  "city",
+                  "zip",
+                  "state",
+                  "country",
+                  "phone"
+                ],
+                "line": 28
+              },
+              {
+                "cells": [
+                  "1",
+                  "123 Main Street",
+                  "Columbus",
+                  "32811",
+                  "OH",
+                  "USA",
+                  "641-342-547"
+                ],
+                "line": 29
+              },
+              {
+                "cells": [
+                  "2",
+                  "124 Main Street",
+                  "Dallas",
+                  "32812",
+                  "TX",
+                  "USA",
+                  "771-342-4536"
+                ],
+                "line": 30
+              },
+              {
+                "cells": [
+                  "3",
+                  "4633 Cason Cove DR",
+                  "Orlando",
+                  "32810",
+                  "FL",
+                  "USA",
+                  "771-342-4536"
+                ],
+                "line": 31
+              }
+            ],
+            "keyword": "And "
+          }
+        ]
+      }
+    ],
+    "name": "Get Employee",
+    "description": "",
+    "id": "get-employee",
+    "keyword": "Feature",
+    "uri": "100-employee.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@postexample"
+      }
+    ]
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 13940100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "MovieSteps.setUp()"
+            }
+          },
+          {
+            "result": {
+              "duration": 754300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "EmployeeSteps.setUp()"
+            }
+          }
+        ],
+        "line": 4,
+        "name": "calls all movies from web service",
+        "description": "",
+        "id": "get-movie-details;calls-all-movies-from-web-service",
+        "after": [
+          {
+            "result": {
+              "duration": 5564900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "MovieSteps.afterAll()"
+            }
+          },
+          {
+            "result": {
+              "duration": 360201,
+              "status": "passed"
+            },
+            "match": {
+              "location": "EmployeeSteps.afterAll()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 95899199,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "A list of movies are available",
+            "match": {
+              "location": "MovieSteps.a_list_of_movies_are_available()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 498654500,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "we add a movie to the list",
+            "match": {
+              "location": "MovieSteps.we_add_a_movie_to_the_list(Movie\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "movie_id",
+                  "name",
+                  "year",
+                  "cast",
+                  "release_date"
+                ],
+                "line": 7
+              },
+              {
+                "cells": [
+                  "11",
+                  "Toy Story 4",
+                  "2019",
+                  "Tom Hanks, Tim Allen",
+                  "1919-03-01"
+                ],
+                "line": 8
+              },
+              {
+                "cells": [
+                  "12",
+                  "Joe",
+                  "2022",
+                  "Rodrigue Medor",
+                  "1919-03-01"
+                ],
+                "line": 9
+              },
+              {
+                "cells": [
+                  "14",
+                  "Zark",
+                  "2021",
+                  "Sara Valentin",
+                  "1919-03-01"
+                ],
+                "line": 10
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 31415200,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "the following movie exist",
+            "match": {
+              "location": "MovieSteps.the_following_movie_exist(Movie\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "movie_id",
+                  "name",
+                  "year",
+                  "cast",
+                  "release_date"
+                ],
+                "line": 12
+              },
+              {
+                "cells": [
+                  "11",
+                  "Toy Story 4",
+                  "2019",
+                  "Tom Hanks, Tim Allen",
+                  "1919-03-01"
+                ],
+                "line": 13
+              },
+              {
+                "cells": [
+                  "12",
+                  "Joe",
+                  "2022",
+                  "Rodrigue Medor",
+                  "1919-03-01"
+                ],
+                "line": 14
+              },
+              {
+                "cells": [
+                  "14",
+                  "Zark",
+                  "2021",
+                  "Sara Valentin",
+                  "1919-03-01"
+                ],
+                "line": 15
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 240301,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "the movie is added",
+            "match": {
+              "location": "MovieSteps.the_movie_is_added()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 33459400,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "the movie \"Toy Story 4\" remove from the list",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Toy Story 4",
+                  "offset": 11
+                }
+              ],
+              "location": "MovieSteps.we_remove_a_movie_id_from_the_list(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 49993801,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "the movie is removed",
+            "match": {
+              "location": "MovieSteps.the_movie_is_removed()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 13306600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "MovieSteps.setUp()"
+            }
+          },
+          {
+            "result": {
+              "duration": 936900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "EmployeeSteps.setUp()"
+            }
+          }
+        ],
+        "line": 20,
+        "name": "WITH ALL REQUIRED FIELDS IS SUCCESSFUL",
+        "description": "",
+        "id": "get-movie-details;with-all-required-fields-is-successful",
+        "after": [
+          {
+            "result": {
+              "duration": 2581100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "MovieSteps.afterAll()"
+            }
+          },
+          {
+            "result": {
+              "duration": 54200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "EmployeeSteps.afterAll()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 69659801,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "user wants to create and list a movie with the following attributes",
+            "match": {
+              "location": "MovieSteps.user_wants_to_create_and_list_a_movie_with_the_following_attributes(Movie\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "movie_id",
+                  "name",
+                  "year",
+                  "cast",
+                  "release_date"
+                ],
+                "line": 22
+              },
+              {
+                "cells": [
+                  "11",
+                  "Toy Story 4",
+                  "2019",
+                  "Tom Hanks, Tim Allen",
+                  "1919-03-01"
+                ],
+                "line": 23
+              }
+            ],
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 23281300,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "user saves the new movie1 \u0027WITH ALL REQUIRED FIELDS\u0027",
+            "match": {
+              "location": "MovieSteps.user_saves_the_new_movie1_WITH_ALL_REQUIRED_FIELDS()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 201900,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "the save \u0027IS SUCCESSFUL\u0027",
+            "match": {
+              "location": "MovieSteps.the_save_IS_SUCCESSFUL()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 10040600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "MovieSteps.setUp()"
+            }
+          },
+          {
+            "result": {
+              "duration": 593700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "EmployeeSteps.setUp()"
+            }
+          }
+        ],
+        "line": 40,
+        "name": "WITHOUT ID FAILS",
+        "description": "",
+        "id": "get-movie-details;\u003ctestcase\u003e-\u003cexpectedresult\u003e;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 5878300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "MovieSteps.afterAll()"
+            }
+          },
+          {
+            "result": {
+              "duration": 69899,
+              "status": "passed"
+            },
+            "match": {
+              "location": "EmployeeSteps.afterAll()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 70848599,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "fetch list of movies",
+            "match": {
+              "location": "MovieSteps.getListOfMovies()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 24008999,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "user wants to create a movie with the following attributes",
+            "match": {
+              "location": "MovieSteps.user_wants_to_create_a_movie_with_the_following_attributes(Movie\u003e)"
+            },
+            "matchedColumns": [
+              2,
+              3,
+              4,
+              5
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "movie_id",
+                  "name",
+                  "year",
+                  "cast",
+                  "release_date"
+                ],
+                "line": 32
+              },
+              {
+                "cells": [
+                  "12",
+                  "Toy Story 4",
+                  "2019",
+                  "Tom Hanks, Tim Allen",
+                  "2005-06-15"
+                ],
+                "line": 33
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 26742900,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "user saves the new movie \u0027WITHOUT ID\u0027",
+            "match": {
+              "location": "MovieSteps.user_saves_the_new_movie_WITHOUT_ID()"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 39089400,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "the save \u0027FAILS\u0027",
+            "match": {
+              "location": "MovieSteps.the_save_FAILS()"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@getexample"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 34127699,
+              "status": "passed"
+            },
+            "match": {
+              "location": "MovieSteps.setUp()"
+            }
+          },
+          {
+            "result": {
+              "duration": 964199,
+              "status": "passed"
+            },
+            "match": {
+              "location": "EmployeeSteps.setUp()"
+            }
+          }
+        ],
+        "line": 41,
+        "name": "WITHOUT name FAILS",
+        "description": "",
+        "id": "get-movie-details;\u003ctestcase\u003e-\u003cexpectedresult\u003e;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 3777000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "MovieSteps.afterAll()"
+            }
+          },
+          {
+            "result": {
+              "duration": 54699,
+              "status": "passed"
+            },
+            "match": {
+              "location": "EmployeeSteps.afterAll()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 73359000,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "fetch list of movies",
+            "match": {
+              "location": "MovieSteps.getListOfMovies()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 24914800,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "user wants to create a movie with the following attributes",
+            "match": {
+              "location": "MovieSteps.user_wants_to_create_a_movie_with_the_following_attributes(Movie\u003e)"
+            },
+            "matchedColumns": [
+              2,
+              3,
+              4,
+              5
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "movie_id",
+                  "name",
+                  "year",
+                  "cast",
+                  "release_date"
+                ],
+                "line": 32
+              },
+              {
+                "cells": [
+                  "12",
+                  "",
+                  "2022",
+                  "Rodrigue Medor",
+                  "2005-06-16"
+                ],
+                "line": 33
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 23618799,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "user saves the new movie \u0027WITHOUT name\u0027",
+            "match": {
+              "location": "MovieSteps.user_saves_the_new_movie_WITHOUT_name()"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 34368300,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "the save \u0027FAILS\u0027",
+            "match": {
+              "location": "MovieSteps.the_save_FAILS()"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@getexample"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 11323600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "MovieSteps.setUp()"
+            }
+          },
+          {
+            "result": {
+              "duration": 757000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "EmployeeSteps.setUp()"
+            }
+          }
+        ],
+        "line": 42,
+        "name": "WITHOUT year FAILS",
+        "description": "",
+        "id": "get-movie-details;\u003ctestcase\u003e-\u003cexpectedresult\u003e;;4",
+        "after": [
+          {
+            "result": {
+              "duration": 2700501,
+              "status": "passed"
+            },
+            "match": {
+              "location": "MovieSteps.afterAll()"
+            }
+          },
+          {
+            "result": {
+              "duration": 63700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "EmployeeSteps.afterAll()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 53056500,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "fetch list of movies",
+            "match": {
+              "location": "MovieSteps.getListOfMovies()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 17475701,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "user wants to create a movie with the following attributes",
+            "match": {
+              "location": "MovieSteps.user_wants_to_create_a_movie_with_the_following_attributes(Movie\u003e)"
+            },
+            "matchedColumns": [
+              2,
+              3,
+              4,
+              5
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "movie_id",
+                  "name",
+                  "year",
+                  "cast",
+                  "release_date"
+                ],
+                "line": 32
+              },
+              {
+                "cells": [
+                  "12",
+                  "Zark",
+                  "",
+                  "Sara Valentin",
+                  "2005-06-18"
+                ],
+                "line": 33
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 14896599,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "user saves the new movie \u0027WITHOUT year\u0027",
+            "match": {
+              "location": "MovieSteps.user_saves_the_new_movie_WITHOUT_year()"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 26529999,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "the save \u0027FAILS\u0027",
+            "match": {
+              "location": "MovieSteps.the_save_FAILS()"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@getexample"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 127451900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "MovieSteps.setUp()"
+            }
+          },
+          {
+            "result": {
+              "duration": 1219000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "EmployeeSteps.setUp()"
+            }
+          }
+        ],
+        "line": 43,
+        "name": "WITHOUT cast FAILS",
+        "description": "",
+        "id": "get-movie-details;\u003ctestcase\u003e-\u003cexpectedresult\u003e;;5",
+        "after": [
+          {
+            "result": {
+              "duration": 2672000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "MovieSteps.afterAll()"
+            }
+          },
+          {
+            "result": {
+              "duration": 67600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "EmployeeSteps.afterAll()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 76091000,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "fetch list of movies",
+            "match": {
+              "location": "MovieSteps.getListOfMovies()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 21446400,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "user wants to create a movie with the following attributes",
+            "match": {
+              "location": "MovieSteps.user_wants_to_create_a_movie_with_the_following_attributes(Movie\u003e)"
+            },
+            "matchedColumns": [
+              2,
+              3,
+              4,
+              5
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "movie_id",
+                  "name",
+                  "year",
+                  "cast",
+                  "release_date"
+                ],
+                "line": 32
+              },
+              {
+                "cells": [
+                  "12",
+                  "Toy Story 4",
+                  "2019",
+                  "",
+                  "2005-06-20"
+                ],
+                "line": 33
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 19635200,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "user saves the new movie \u0027WITHOUT cast\u0027",
+            "match": {
+              "location": "MovieSteps.user_saves_the_new_movie_WITHOUT_cast()"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 32203500,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "the save \u0027FAILS\u0027",
+            "match": {
+              "location": "MovieSteps.the_save_FAILS()"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@getexample"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 22195300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "MovieSteps.setUp()"
+            }
+          },
+          {
+            "result": {
+              "duration": 733100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "EmployeeSteps.setUp()"
+            }
+          }
+        ],
+        "line": 44,
+        "name": "WITH ALL REQUIRED FIELDS IS SUCCESSFUL",
+        "description": "",
+        "id": "get-movie-details;\u003ctestcase\u003e-\u003cexpectedresult\u003e;;6",
+        "after": [
+          {
+            "result": {
+              "duration": 4358900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "MovieSteps.afterAll()"
+            }
+          },
+          {
+            "result": {
+              "duration": 64100,
+              "status": "passed"
+            },
+            "match": {
+              "location": "EmployeeSteps.afterAll()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 94436100,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "fetch list of movies",
+            "match": {
+              "location": "MovieSteps.getListOfMovies()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 26334300,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "user wants to create a movie with the following attributes",
+            "match": {
+              "location": "MovieSteps.user_wants_to_create_a_movie_with_the_following_attributes(Movie\u003e)"
+            },
+            "matchedColumns": [
+              2,
+              3,
+              4,
+              5
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "movie_id",
+                  "name",
+                  "year",
+                  "cast",
+                  "release_date"
+                ],
+                "line": 32
+              },
+              {
+                "cells": [
+                  "12",
+                  "Joe",
+                  "2022",
+                  "Rodrigue Medor",
+                  "2005-06-28"
+                ],
+                "line": 33
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 13351100,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "user saves the new movie \u0027WITH ALL REQUIRED FIELDS\u0027",
+            "match": {
+              "location": "MovieSteps.user_saves_the_new_movie_WITH_ALL_REQUIRED_FIELDS()"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 261999,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "the save \u0027IS SUCCESSFUL\u0027",
+            "match": {
+              "location": "MovieSteps.the_save_IS_SUCCESSFUL()"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@getexample"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 19079101,
+              "status": "passed"
+            },
+            "match": {
+              "location": "MovieSteps.setUp()"
+            }
+          },
+          {
+            "result": {
+              "duration": 847401,
+              "status": "passed"
+            },
+            "match": {
+              "location": "EmployeeSteps.setUp()"
+            }
+          }
+        ],
+        "line": 45,
+        "name": "WITH ALL REQUIRED FIELDS IS SUCCESSFUL",
+        "description": "",
+        "id": "get-movie-details;\u003ctestcase\u003e-\u003cexpectedresult\u003e;;7",
+        "after": [
+          {
+            "result": {
+              "duration": 2686600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "MovieSteps.afterAll()"
+            }
+          },
+          {
+            "result": {
+              "duration": 51901,
+              "status": "passed"
+            },
+            "match": {
+              "location": "EmployeeSteps.afterAll()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 71629900,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "fetch list of movies",
+            "match": {
+              "location": "MovieSteps.getListOfMovies()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 19337499,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "user wants to create a movie with the following attributes",
+            "match": {
+              "location": "MovieSteps.user_wants_to_create_a_movie_with_the_following_attributes(Movie\u003e)"
+            },
+            "matchedColumns": [
+              2,
+              3,
+              4,
+              5
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "movie_id",
+                  "name",
+                  "year",
+                  "cast",
+                  "release_date"
+                ],
+                "line": 32
+              },
+              {
+                "cells": [
+                  "12",
+                  "Zark",
+                  "2021",
+                  "Sara Valentin Kayleigh",
+                  "2005-07-15"
+                ],
+                "line": 33
+              }
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 14120700,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "user saves the new movie \u0027WITH ALL REQUIRED FIELDS\u0027",
+            "match": {
+              "location": "MovieSteps.user_saves_the_new_movie_WITH_ALL_REQUIRED_FIELDS()"
+            },
+            "matchedColumns": [
+              0
+            ],
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 312899,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "the save \u0027IS SUCCESSFUL\u0027",
+            "match": {
+              "location": "MovieSteps.the_save_IS_SUCCESSFUL()"
+            },
+            "matchedColumns": [
+              1
+            ],
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 1,
+            "name": "@getexample"
+          }
+        ]
+      }
+    ],
+    "name": "Get movie details",
+    "description": "",
+    "id": "get-movie-details",
+    "keyword": "Feature",
+    "uri": "100-movie.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@getexample"
+      }
+    ]
+  }
+]

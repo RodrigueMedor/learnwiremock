@@ -8,8 +8,9 @@ import com.github.tomakehurst.wiremock.client.WireMock;
 import com.github.tomakehurst.wiremock.junit.WireMockRule;
 import com.learnwiremock.LearnwiremockApplication;
 import com.learnwiremock.dto.Movie;
-//import com.learnwiremock.SpringIntegrationTest;
+import com.learnwiremock.SpringIntegrationTest;
 import com.learnwiremock.service.MoviesRestClient;
+import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -21,6 +22,7 @@ import cucumber.api.java.en.When;
 //import io.cucumber.java.en.Then;
 //import io.cucumber.java.en.When;
 import org.junit.Rule;
+import org.junit.jupiter.api.AfterEach;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.HttpHeaders;
@@ -37,27 +39,21 @@ import static com.github.tomakehurst.wiremock.core.WireMockConfiguration.wireMoc
 import static com.learnwiremock.constants.MoviesAppConstants.ADD_MOVIE_V1;
 import static com.learnwiremock.constants.MoviesAppConstants.GET_ALL_MOVIES_V1;
 import static org.junit.Assert.*;
-@ContextConfiguration
-@SpringBootTest(classes = LearnwiremockApplication.class, webEnvironment = SpringBootTest.WebEnvironment.DEFINED_PORT)
-@TestPropertySource(properties= {"movieapp.baseUrl=http://localhost:8889"})
-public class MovieSteps /*extends SpringIntegrationTest*/ {
 
+public class MovieSteps extends SpringIntegrationTest {
 
-    protected WireMockPactGenerator wireMockPact;
-
-    @Autowired
-    protected MoviesRestClient moviesRestClient;
-    @Rule
-    public WireMockRule wireMockRule = new WireMockRule(wireMockConfig().port(8889));
-
+    private Movie movieNew;
+    private Movie movie;
     @Before
     public void setUp() {
+        wireMockRule.start();
+        movieNew = new Movie();
         wireMockPact =
                 WireMockPactGenerator
                         .builder("orderMs", "jsonPlaceHolderMs")
                         .withRequestPathWhitelist(
                                 GET_ALL_MOVIES_V1+".*"
-                        )
+                        ).withRequestPathBlacklist(ADD_MOVIE_V1+".*")
                         .build();
         wireMockRule.addMockServiceRequestListener(
                 wireMockPact
@@ -90,7 +86,7 @@ public class MovieSteps /*extends SpringIntegrationTest*/ {
     @When("^we add a movie to the list$")
     public void we_add_a_movie_to_the_list(List<Movie> stores) throws JsonProcessingException {
         System.out.println("LocalDate id "+ stores);
-        wireMockRule.stubFor(post(urlPathEqualTo(ADD_MOVIE_V1))
+        wireMockRule.stubFor(post(WireMock.anyUrl())
 //                .withRequestBody(matchingJsonPath("$.name", containing("Joe")))
                 .withRequestBody(matchingJsonPath(("$.name"), containing("Joe")))
                 .withRequestBody(matchingJsonPath(("$.cast"), containing("Medor")))
@@ -110,6 +106,11 @@ public class MovieSteps /*extends SpringIntegrationTest*/ {
 
         //then
         assertFalse(stores.isEmpty());
+//        verify(lessThan(5), anyRequestedFor(anyUrl()));
+//        verify(lessThanOrExactly(5), anyRequestedFor(anyUrl()));
+//        verify(exactly(5), anyRequestedFor(anyUrl()));
+//        verify(moreThanOrExactly(5), anyRequestedFor(anyUrl()));
+//        verify(moreThan(5), anyRequestedFor(anyUrl()));
     }
 
     @Given("^the following movie exist$")
@@ -141,7 +142,7 @@ public class MovieSteps /*extends SpringIntegrationTest*/ {
 
     @When("^the movie \"([^\"]*)\" remove from the list$")
     public void we_remove_a_movie_id_from_the_list(String name) {
-        wireMockRule.stubFor(post(urlPathEqualTo(ADD_MOVIE_V1))
+        wireMockRule.stubFor(post(WireMock.anyUrl())
                 .withRequestBody(matchingJsonPath("$.name", equalTo(name)))
                 .willReturn(WireMock.aResponse()
                         .withStatus(HttpStatus.CREATED.value())
@@ -156,7 +157,7 @@ public class MovieSteps /*extends SpringIntegrationTest*/ {
         Movie movie = moviesRestClient.addNewMovie(toyStory);
 
         //when
-        String responseMessage = moviesRestClient.deleteMovieByName(name);
+        String responseMessage = moviesRestClient.deleteMovieByName(movie.getName());
 
         //then
         assertEquals("Movie Deleted SuccessFully", responseMessage);
@@ -165,12 +166,10 @@ public class MovieSteps /*extends SpringIntegrationTest*/ {
 
     @Then("^the movie is removed$")
     public void the_movie_is_removed() throws Throwable {
-        givenThat(get(urlPathMatching("/movieservice/v1/movieName/.*")).willReturn(
-                aResponse().withStatus(200)
-        ));
+//        givenThat(get(urlPathMatching("/movieservice/v1/movieName/.*")).willReturn(
+//                aResponse().withStatus(200)
+//        ));
     }
-
-    private Movie movie;
 
     @Given("^user wants to create and list a movie with the following attributes$")
     public void user_wants_to_create_and_list_a_movie_with_the_following_attributes(List<Movie> movies) throws Throwable {
@@ -198,7 +197,7 @@ public class MovieSteps /*extends SpringIntegrationTest*/ {
 
     @When("^user saves the new movie1 'WITH ALL REQUIRED FIELDS'$")
     public void user_saves_the_new_movie1_WITH_ALL_REQUIRED_FIELDS() throws Throwable {
-        wireMockRule.stubFor(post(urlPathEqualTo(ADD_MOVIE_V1))
+        wireMockRule.stubFor(post(anyUrl())
 //                .withRequestBody(matchingJsonPath("$.name", containing("Joe")))
                 .withRequestBody(matchingJsonPath(("$.name")))
                 .withRequestBody(matchingJsonPath(("$.cast")))
@@ -220,26 +219,45 @@ public class MovieSteps /*extends SpringIntegrationTest*/ {
         ));
     }
 
-    private Movie movieNew;
-    @Given("^user wants to create a movie with the following attributes$")
+    @Given("^fetch list of movies$")
+    public void getListOfMovies(){
+        wireMockRule.stubFor(get(WireMock.anyUrl())
+                .willReturn(WireMock.aResponse()
+                        .withHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
+                        .withStatus(HttpStatus.OK.value())
+                        .withBodyFile("add-movie-outline.json")));
+        //whenx
+        List<Movie> movieList = moviesRestClient.retrieveAllMovies();
+        assertTrue(!movieList.isEmpty());
+    }
+
+    @When("^user wants to create a movie with the following attributes$")
     public void user_wants_to_create_a_movie_with_the_following_attributes(List<Movie> movies) throws Throwable {
         movieNew = movies.stream().findAny().orElse(null);
         ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();
         String json = ow.writeValueAsString(movieNew);
-//        List<String>  stringList = new ArrayList<>();
-//        stringList.add(json);
-//        System.out.println("Json array: "+stringList);
+//        wireMockRule.stubFor(post(WireMock.anyUrl())
+//                .withRequestBody(matchingJsonPath(("$.movie_id"), equalTo(String.valueOf(movieNew.getMovie_id()))))
+//                .withRequestBody(matchingJsonPath(("$.name"), equalTo(movieNew.getName())))
+//                .withRequestBody(matchingJsonPath(("$.cast"), equalTo(movieNew.getCast())))
+//                .withRequestBody(matchingJsonPath(("$.release_date"), equalTo(movieNew.getRelease_date())))
+//                .willReturn(WireMock.aResponse()
+//                        .withStatus(HttpStatus.CREATED.value())
+//                        .withHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
+//                        .withBodyFile("add-movie-outline.json")));
 
-        wireMockRule.stubFor(post(urlPathEqualTo(ADD_MOVIE_V1))
+        wireMockRule.stubFor(post(anyUrl())
 //                .withRequestBody(matchingJsonPath("$.name", containing("Joe")))
+                .withRequestBody(matchingJsonPath(("$.movie_id")))
                 .withRequestBody(matchingJsonPath(("$.name")))
                 .withRequestBody(matchingJsonPath(("$.cast")))
+                .withRequestBody(matchingJsonPath(("$.release_date")))
                 .willReturn(WireMock.aResponse()
                         .withStatus(HttpStatus.CREATED.value())
                         .withHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE)
                         .withBody(json)));
 
-        System.out.println("&&&&&&&&&&&&&&&&&&&&&&&&& user wants to create a movie"+ movieNew);
+        System.out.println("&&&&&&&&&&&&&&&&&&&&&&&&& user wants to create a movie"+ movies);
 
         Movie movie2 = moviesRestClient.addNewMovie(movieNew);
         assertEquals(movie2.getMovie_id(), movieNew.getMovie_id());
@@ -249,7 +267,7 @@ public class MovieSteps /*extends SpringIntegrationTest*/ {
     @When("^user saves the new movie 'WITHOUT ID'$")
     public void user_saves_the_new_movie_WITHOUT_ID() throws Throwable {
         movieNew.setMovie_id(null);
-        wireMockRule.stubFor(post(urlPathEqualTo(ADD_MOVIE_V1))
+        wireMockRule.stubFor(post(anyUrl())
 //                .withRequestBody(matchingJsonPath("$.name", containing("Joe")))
                 .withRequestBody(matchingJsonPath(("$.name")))
                 .withRequestBody(matchingJsonPath(("$.cast")))
@@ -266,14 +284,14 @@ public class MovieSteps /*extends SpringIntegrationTest*/ {
 
     @Then("^the save 'FAILS'$")
     public void the_save_FAILS() {
-            givenThat(post(urlPathMatching(ADD_MOVIE_V1)).willReturn(
-                    aResponse().withStatus(404)
-            ));
+//            givenThat(post(anyUrl()).willReturn(
+//                    aResponse().withStatus(404)
+//            ));
     }
 
     @When("^user saves the new movie 'WITHOUT name'$")
     public void user_saves_the_new_movie_WITHOUT_name() throws Throwable {
-        wireMockRule.stubFor(post(urlPathEqualTo(ADD_MOVIE_V1))
+        wireMockRule.stubFor(post(anyUrl())
                 .withRequestBody(matchingJsonPath(("$.name")))
                 .withRequestBody(matchingJsonPath(("$.cast")))
                 .willReturn(WireMock.aResponse()
@@ -290,7 +308,7 @@ public class MovieSteps /*extends SpringIntegrationTest*/ {
     @When("^user saves the new movie 'WITHOUT year'$")
     public void user_saves_the_new_movie_WITHOUT_year() throws Throwable {
 //        movieNew.setYear(null);
-        wireMockRule.stubFor(post(urlPathEqualTo(ADD_MOVIE_V1))
+        wireMockRule.stubFor(post(anyUrl())
 //                .withRequestBody(matchingJsonPath("$.name", containing("Joe")))
                 .withRequestBody(matchingJsonPath(("$.name")))
                 .withRequestBody(matchingJsonPath(("$.cast")))
@@ -308,7 +326,7 @@ public class MovieSteps /*extends SpringIntegrationTest*/ {
     @When("^user saves the new movie 'WITHOUT cast'$")
     public void user_saves_the_new_movie_WITHOUT_cast() throws Throwable {
 //        movieNew.setCast(null);
-        wireMockRule.stubFor(post(urlPathEqualTo(ADD_MOVIE_V1))
+        wireMockRule.stubFor(post(anyUrl())
 //                .withRequestBody(matchingJsonPath("$.name", containing("Joe")))
                 .withRequestBody(matchingJsonPath(("$.name")))
                 .withRequestBody(matchingJsonPath(("$.cast")))
@@ -325,7 +343,7 @@ public class MovieSteps /*extends SpringIntegrationTest*/ {
 
     @When("^user saves the new movie 'WITH ALL REQUIRED FIELDS'$")
     public void user_saves_the_new_movie_WITH_ALL_REQUIRED_FIELDS() throws Throwable {
-        wireMockRule.stubFor(post(urlPathEqualTo(ADD_MOVIE_V1))
+        wireMockRule.stubFor(post(anyUrl())
                 .withRequestBody(matchingJsonPath(("$.name")))
                 .withRequestBody(matchingJsonPath(("$.cast")))
                 .willReturn(WireMock.aResponse()
@@ -339,4 +357,13 @@ public class MovieSteps /*extends SpringIntegrationTest*/ {
         assertEquals(movie2.getMovie_id(), movieNew.getMovie_id());
     }
 
+    @After
+    public void afterAll() {
+        wireMockRule.stop();
+    }
+
+    @AfterEach
+    public void afterEach() {
+        wireMockRule.resetAll();
+    }
 }

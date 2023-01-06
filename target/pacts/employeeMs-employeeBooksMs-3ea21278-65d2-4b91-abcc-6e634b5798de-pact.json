@@ -1,0 +1,94 @@
+{
+  "consumer": {
+    "name": "employeeMs"
+  },
+  "provider": {
+    "name": "employeeBooksMs"
+  },
+  "interactions": [
+    {
+      "description": "GET /v1/allEmployees -> 200",
+      "request": {
+        "method": "GET",
+        "path": "/v1/allEmployees",
+        "headers": {
+          "content-type": "application/json",
+          "connection": "keep-alive",
+          "user-agent": "Java/1.8.0_321",
+          "accept": "application/json, application/*+json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "matched-stub-id": "5575207f-9a61-4115-b10a-739ce7565342"
+        },
+        "body": [
+          {
+            "matriculeId": 1,
+            "lastname": "Green",
+            "firstname": "Rachel",
+            "dateOfBirth": "1990-01-01",
+            "employmentType": "Permanent",
+            "email": "rachel.green@fs.com",
+            "startDate": "2018-01-01",
+            "salaire": 12000.0,
+            "address": null
+          },
+          {
+            "matriculeId": 2,
+            "lastname": "Medor",
+            "firstname": "Rodrigue",
+            "dateOfBirth": "1984-01-01",
+            "employmentType": "Temporary",
+            "email": "rmedor.green@fs.com",
+            "startDate": "2020-01-01",
+            "salaire": 12300.0,
+            "address": null
+          }
+        ]
+      }
+    },
+    {
+      "description": "GET /v1/allEmployees -> 200",
+      "request": {
+        "method": "GET",
+        "path": "/v1/allEmployees",
+        "headers": {
+          "content-type": "application/json",
+          "connection": "keep-alive",
+          "user-agent": "Java/1.8.0_321",
+          "accept": "application/json, application/*+json"
+        }
+      },
+      "response": {
+        "status": 200,
+        "headers": {
+          "content-type": "application/json",
+          "matched-stub-id": "b2711e99-4284-4ec3-a87d-e67d3fa68db1"
+        },
+        "body": [
+          {
+            "address_id": 1,
+            "street": "123 Main Street",
+            "city": "10001",
+            "zip": "32811",
+            "state": "OH",
+            "country": "USA",
+            "phone": "641-342-547"
+          },
+          {
+            "address_id": 2,
+            "street": "124 Main Street",
+            "city": "10001",
+            "zip": "32812",
+            "state": "FL",
+            "country": "USA",
+            "phone": "771-342-4536"
+          }
+        ]
+      }
+    }
+  ]
+}

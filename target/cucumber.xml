@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="9" time="5.871249">
+<testcase classname="Get Employee" name="GET BY ID" time="3.961097">
+<system-out><![CDATA[Given an employee with the following attributes.............................passed
+And with the following address..............................................passed
+When employee already exists................................................passed
+When user wants to get employee by id 2.....................................passed
+Then the get 'IS SUCCESSFUL'................................................passed
+And following employee is returned..........................................passed
+And following employee address are returned.................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Get movie details" name="calls all movies from web service" time="0.730282">
+<system-out><![CDATA[Given A list of movies are available........................................passed
+When we add a movie to the list.............................................passed
+Given the following movie exist.............................................passed
+Then the movie is added.....................................................passed
+When the movie "Toy Story 4" remove from the list...........................passed
+Then the movie is removed...................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Get movie details" name="WITH ALL REQUIRED FIELDS IS SUCCESSFUL" time="0.110022">
+<system-out><![CDATA[Given user wants to create and list a movie with the following attributes...passed
+When user saves the new movie1 'WITH ALL REQUIRED FIELDS'...................passed
+Then the save 'IS SUCCESSFUL'...............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Get movie details" name="WITHOUT ID FAILS" time="0.177272">
+<system-out><![CDATA[Given fetch list of movies..................................................passed
+When user wants to create a movie with the following attributes.............passed
+When user saves the new movie 'WITHOUT ID'..................................passed
+Then the save 'FAILS'.......................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Get movie details" name="WITHOUT name FAILS" time="0.195184">
+<system-out><![CDATA[Given fetch list of movies..................................................passed
+When user wants to create a movie with the following attributes.............passed
+When user saves the new movie 'WITHOUT name'................................passed
+Then the save 'FAILS'.......................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Get movie details" name="WITHOUT year FAILS" time="0.126804">
+<system-out><![CDATA[Given fetch list of movies..................................................passed
+When user wants to create a movie with the following attributes.............passed
+When user saves the new movie 'WITHOUT year'................................passed
+Then the save 'FAILS'.......................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Get movie details" name="WITHOUT cast FAILS" time="0.280787">
+<system-out><![CDATA[Given fetch list of movies..................................................passed
+When user wants to create a movie with the following attributes.............passed
+When user saves the new movie 'WITHOUT cast'................................passed
+Then the save 'FAILS'.......................................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Get movie details" name="WITH ALL REQUIRED FIELDS IS SUCCESSFUL" time="0.161735">
+<system-out><![CDATA[Given fetch list of movies..................................................passed
+When user wants to create a movie with the following attributes.............passed
+When user saves the new movie 'WITH ALL REQUIRED FIELDS'....................passed
+Then the save 'IS SUCCESSFUL'...............................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Get movie details" name="WITH ALL REQUIRED FIELDS IS SUCCESSFUL 2" time="0.128066">
+<system-out><![CDATA[Given fetch list of movies..................................................passed
+When user wants to create a movie with the following attributes.............passed
+When user saves the new movie 'WITH ALL REQUIRED FIELDS'....................passed
+Then the save 'IS SUCCESSFUL'...............................................passed
+]]></system-out>
+</testcase>
+</testsuite>
